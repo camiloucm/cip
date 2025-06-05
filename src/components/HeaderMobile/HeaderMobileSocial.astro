@@ -1,0 +1,13 @@
+---
+interface Props {
+    page_open: string;
+    icon_social: string;
+}
+
+const { page_open, icon_social} = Astro.props;
+---
+<li>
+    <a href={ page_open } class="rounded-md w-11 h-11 flex items-center justify-center text-muted-foreground bg-primary hover:scale-110 transition-all duration-500" target="_blank" rel="noreferrer">
+        <i class={`text-xl text-prymary active:scale-150 transition-all duration-500 ${ icon_social }`}></i>
+    </a>
+</li>

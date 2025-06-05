@@ -1,0 +1,15 @@
+---
+import EntradasIndexWordpress from './EntradasIndexWordpress.astro';
+
+import { getLatestposts } from '../lib/wp';
+
+const posts = await getLatestposts({ perPage: 3 });
+---
+
+<section class="flex sm:flex-row flex-col justify-center items-start mt-16 w-full sm:h-4/5">
+    <article class="flex sm:flex-row flex-col sm:gap-16 gap-6 items-center sm:justify-start justify-start sm:w-4/5 h-full">
+
+        {posts.map((post) => <EntradasIndexWordpress {...post}/> )}
+        
+    </article>
+</section>

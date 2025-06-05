@@ -1,0 +1,68 @@
+const DOMAIN = import.meta.env.WP_DOMAIN;
+const apiUrl = `${DOMAIN}/wp-json/wp/v2`;
+
+//Esto es para agregar contenido a las páginas
+export const getPageinfo = async ( slug:string ) => {
+    const response = await fetch (`${ apiUrl }/pages?slug=${ slug }`);
+    if ( !response.ok ) throw new Error ( 'La página falló realizando el Fetching de datos' );
+
+    const [ data ] = await response.json();
+    const { title: { rendered: title }, content: { rendered:content } } = data;
+
+    return { title, content};
+}
+
+//Esto es para las entradas
+export const getLatestposts = async ({ perPage = 10 } : { perPage?: number } = {}) => {
+    const response = await fetch (`${ apiUrl }/posts?per_page=${ perPage }&_embed`); 
+    if ( !response.ok ) throw new Error ('La página falló realizando el Fetching de datos');
+
+    const results = await response.json();
+    if ( !results.length ) throw new Error ('No hay entradas');
+
+    const posts = results.map (post =>{
+        const { 
+            title: { rendered: title }, 
+            content: { rendered: content },
+            excerpt: { rendered: excerpt }, 
+            slug,
+            date 
+        } = post;
+
+        //Dicho de otra manera
+        /* const TITLE = post.TITLE.rendered;
+        const EXCERPT = post.EXCERPT.rendered;
+        const CONTENT = post.CONTENT.rendered;
+        const DATE = post.DATE;
+        const SLUG = post.SLUG; */
+
+        const featuredImage = post._embedded['wp:featuredmedia'][0].source_url
+
+        return { title, excerpt, content, date, slug, featuredImage };
+    });
+    
+    return posts;
+}
+
+export const getAllPostsSlugs = async () => {
+    const response = await fetch (`${ apiUrl }/posts?per_page=100`);
+    if ( !response.ok ) throw new Error ('La página falló realizando el Fetching de datos');
+
+    const results = await response.json();
+    if ( !results.length ) throw new Error ('No hay entradas');
+
+    const slugs = results.map ((post) => post.slug);
+    
+    return slugs;
+}
+
+//Esto es para agregar contenido a la página de entrada
+export const getPostInfo = async ( slug:string ) => {
+    const response = await fetch (`${ apiUrl }/posts?slug=${ slug }`);
+    if ( !response.ok ) throw new Error ( 'La página falló realizando el Fetching de datos' );
+
+    const [ data ] = await response.json();
+    const { title: { rendered: title }, content: { rendered:content } } = data;
+
+    return { title, content};
+}

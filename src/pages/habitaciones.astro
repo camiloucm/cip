@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroPages from '../components/HeroPages.astro';
+import CheckInOut from '../components/CheckInOut.astro';
+import HabitacionCardL from '../components/HabitacionCardL.astro';
+import HabitacionCardR from '../components/HabitacionCardR.astro';
+import AmenidadesCard from '../components/AmenidadesCard.astro';
+---
+
+<Layout title=Habitaciones>
+	<HeroPages title='Habitaciones'/>
+	
+    <div class="mb-22">
+        <CheckInOut />
+    </div>
+    
+    <div class="hidden md:block">
+        <HabitacionCardL 
+            title='Habitación Sencilla'
+            description='Las habitaciones, sencillas y con una decoración sobria, ofrecen wifi gratis, televisores, aire acondicionado y baños privados con ducha.'
+            imageUrl='habitacionImagen'
+            bg='bg-primary'
+            border='border-secondary'
+            textColor='text-white'
+            urlBotom='#'
+            actionBotom="Reservar"
+            bgBotom="secondary"
+        />
+
+        <HabitacionCardR 
+            title='Habitación Doble'
+            description='Las habitaciones, sencillas y con una decoración sobria, ofrecen wifi gratis, televisores, aire acondicionado y baños privados con ducha.'
+            imageUrl='habitacionImagen'
+            bg='bg-secondary'
+            border='border-primary'
+            textColor='text-white'
+            urlBotom='#'
+            actionBotom="Reservar"
+            bgBotom="primary"
+        />
+
+        <HabitacionCardL 
+            title='Habitación Triple'
+            description='Las habitaciones, sencillas y con una decoración sobria, ofrecen wifi gratis, televisores, aire acondicionado y baños privados con ducha.'
+            imageUrl='habitacionImagen'
+            bg='#e5dfcb'
+            border='border-primary'
+            textColor='text-secondary'
+            urlBotom='#'
+            actionBotom="Reservar"
+            bgBotom="secondary"
+        />
+    </div> 
+
+    <div class="md:hidden">
+        <HabitacionCardL 
+            title='Habitación Sencilla'
+            description='Las habitaciones, sencillas y con una decoración sobria, ofrecen wifi gratis, televisores, aire acondicionado y baños privados con ducha.'
+            imageUrl='habitacionImagen'
+            bg='bg-primary'
+            border='border-secondary'
+            textColor='text-white'
+            urlBotom='#'
+            actionBotom="Reservar"
+            bgBotom="secondary"
+        />
+
+        <HabitacionCardL 
+            title='Habitación Doble'
+            description='Las habitaciones, sencillas y con una decoración sobria, ofrecen wifi gratis, televisores, aire acondicionado y baños privados con ducha.'
+            imageUrl='habitacionImagen'
+            bg='bg-secondary'
+            border='border-primary'
+            textColor='text-white'
+            urlBotom='#'
+            actionBotom="Reservar"
+            bgBotom="primary"
+        />
+
+        <HabitacionCardL 
+            title='Habitación Triple'
+            description='Las habitaciones, sencillas y con una decoración sobria, ofrecen wifi gratis, televisores, aire acondicionado y baños privados con ducha.'
+            imageUrl='habitacionImagen'
+            bg='#e5dfcb'
+            border='border-primary'
+            textColor='text-secondary'
+            urlBotom='#'
+            actionBotom="Reservar"
+            bgBotom="secondary"
+        />
+    </div> 
+    
+    <AmenidadesCard 
+        imageUrl='habitacionAmenidades'
+    />
+</Layout>

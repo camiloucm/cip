@@ -1,0 +1,74 @@
+---
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<section class="h-[calc(100vh-600px)] mt-[-73px] mb-30">
+    <article class="w-4/5 flex justify-center items-end m-auto">
+        <div class="flex items-end justify-start w-full translate-y-[calc(100vh-600px)] z-3">
+            <div class="block z-1000 sm:py-4 sm:px-14 py-2 px-7 bg-secondary">
+                <h1 class="uppercase font-bold text-primary sm:text-4xl text-xl">
+                    { title }
+                </h1>
+            </div>
+        </div>
+    </article>
+
+    <article class="swiper swiper-hero w-full h-full">
+        <div class="swiper-wrapper">
+            <div class=" swiper-slide w-full h-screen bg-cover bg-center">
+                <div class="herouno bg-cover bg-center flex items-end w-full h-full object-cover"></div>
+            </div>
+
+            <div class="swiper-slide w-full h-screen ">
+                <div class="herodos bg-cover bg-center flex items-end w-full h-full object-cover"></div>
+            </div>
+
+            <div class="swiper-slide ">
+                <div class="herotres bg-cover bg-center flex items-end w-full h-full object-cover"></div>
+            </div>
+        </div>
+    </article>
+</section>  
+
+
+<style>
+    .swiper-button-prev, .swiper-button-next {
+        --swiper-theme-color: var(--color-white);
+        --swiper-navigation-size: 20px;
+        background-color: var(--color-primary);
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+    }
+
+    .herouno {
+        background-image: url('../assets/libs/imgs/1000343281-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .herodos {
+        background-image: url('../assets/libs/imgs/1000343287-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .herotres {
+        background-image: url('../assets/libs/imgs/1000343297-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .swiper-hero .swiper-pagination {
+        --swiper-pagination-color: white;
+        --swiper-pagination-bullet-size: 20px;
+        --swiper-pagination-bullet-opacity: 60%;
+        --swiper-pagination-bullet-inactive-color: black;
+        --swiper-pagination-bullet-inactive-opacity: 40%;
+        --swiper-pagination-bullet-horizontal-gap: 8px;
+    }
+</style>

@@ -1,0 +1,47 @@
+---
+import TarjetaAtractivos from './Atractivos/TarjetaAtractivos.astro';
+---
+
+<section class="flex sm:flex-row flex-col justify-center mt-10">
+    <article class="flex flex-col items-center justify-center w-4/5 m-auto">
+        <h2 class="uppercase sm:text-title text-xl font-bold text-secondary text-center">
+            Lugares atractivos ceranos
+        </h2>
+
+        <div class="flex flex-col sm:mt-8 items-center justify-center">
+            <TarjetaAtractivos 
+                title='Explorar el Canal de Panamá' 
+                description='A pocos minutos del hostal, puedes visitar las esclusas de Miraflores y aprender sobre la historia y funcionamiento de esta maravilla de la ingeniería.'
+                imgClass='atractivouno'
+            />
+
+            <TarjetaAtractivos 
+                title='Recorrer el Casco Antiguo' 
+                description='Sumérgete en la historia y cultura de Panamá paseando por sus calles coloniales, descubriendo iglesias, plazas y una vibrante vida nocturna.'
+                imgClass='atractivouno'
+            />
+
+            <TarjetaAtractivos 
+                title='Visitar el Biomuseo' 
+                description='Diseñado por Frank Gehry, este museo ofrece una experiencia fascinante sobre la biodiversidad de Panamá y su impacto en el mundo.'
+                imgClass='atractivouno'
+            />
+
+            <TarjetaAtractivos 
+                title='Disfrutar de la Calzada de Amador' 
+                description='Perfecta para caminar, andar en bicicleta o simplemente relajarse con vistas espectaculares del océano y la ciudad.'
+                imgClass='atractivouno'
+            />
+
+            
+        </div>
+    </article>
+</section>
+
+<!-- <style>
+    .bgatractivouno {
+        background-image: url('../assets/libs/imgs/1000343287-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+</style> -->

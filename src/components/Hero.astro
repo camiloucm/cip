@@ -1,0 +1,78 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+
+<section class="w-full h-[calc(100vh-135px)] mt-[-80px]">
+    
+    <div class="swiper swiper-hero w-full h-full">
+
+        <div class="swiper-wrapper">
+
+            <div class=" swiper-slide w-full h-screen bg-cover bg-center">
+                <div class="herouno bg-cover bg-center flex items-end w-full h-full object-cover"></div>
+            </div>
+
+            <div class="swiper-slide w-full h-screen ">
+                <div class="herodos bg-cover bg-center flex items-end w-full h-full object-cover"></div>
+            </div>
+
+            <div class="swiper-slide ">
+                <div class="herotres bg-cover bg-center flex items-end w-full h-full object-cover"></div>
+            </div>
+        </div>
+        
+
+
+            
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+
+<style>
+    .swiper-button-prev, .swiper-button-next {
+        --swiper-theme-color: var(--color-white);
+        --swiper-navigation-size: 20px;
+        background-color: var(--color-primary);
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        margin: 0 40px;
+    }
+
+    @media screen and (max-width: 640px) {
+        .swiper-button-prev, .swiper-button-next {
+            --swiper-navigation-size: 16px;
+            display: none
+        }
+        
+    }
+
+    .herouno {
+        background-image: url('../assets/libs/imgs/1000343281-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .herodos {
+        background-image: url('../assets/libs/imgs/1000343287-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .herotres {
+        background-image: url('../assets/libs/imgs/1000343297-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .swiper-hero .swiper-pagination {
+        --swiper-pagination-color: white;
+        --swiper-pagination-bullet-size: 20px;
+        --swiper-pagination-bullet-opacity: 60%;
+        --swiper-pagination-bullet-inactive-color: black;
+        --swiper-pagination-bullet-inactive-opacity: 40%;
+        --swiper-pagination-bullet-horizontal-gap: 8px;
+    }
+</style>

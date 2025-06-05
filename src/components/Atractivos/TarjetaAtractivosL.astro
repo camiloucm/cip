@@ -1,0 +1,57 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    imageUrl?: string;
+    imgClass: string;
+}
+
+const { title, description, imageUrl, imgClass } = Astro.props as Props;
+---
+
+<section class="flex justify-center items-center gap-14 mt-10">
+    <article class="w-1/2">
+        <h3 class="uppercase font-bold text-secondary my-3 text-center text-2xl">{ title }</h3>
+        <p class="text-justify">
+            { description }
+        </p>
+    </article>
+
+    <article class="w-1/2 h-72">
+        <div
+            class=`${ imgClass } w-full h-full bg-cover bg-center`
+    />
+    </article>
+</section>
+
+<style>
+    .atractivouno {
+        background-image: url(../../assets/libs/imgs/1000343287-2.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .atractivodos {
+        background-image: url(../../assets/libs/imgs/1000343287-2.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .atractivotres {
+        background-image: url(../../assets/libs/imgs/1000343287-2.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .atractivocuatro {
+        background-image: url(../../assets/libs/imgs/1000343287-2.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+
+
+
+
+</style>
+

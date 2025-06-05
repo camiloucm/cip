@@ -1,0 +1,59 @@
+---
+interface Props {
+    title: string;
+    punctuation: string;
+    description: string;
+    imageUrl?: string;
+    imageClass: string;
+}
+
+const { title, punctuation, description, imageUrl, imageClass } = Astro.props as Props;
+---
+<div class="flex flex-col items-center justify-center swiper-slide w-full h-full">
+    <div class="flex flex-col justify-center items-center w-full h-1/2 mt-12">
+        <div>
+            <div class=`${ imageClass } flex justify-center items-center sm:w-24 sm:h-24 w-18 h-18 bg-white rounded-full`>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center sm:mt-10 mt-3 text-white sm:w-1/2 w-4/5">
+            <h1 class="text-center text-xl">{ title }</h1>
+            <h2 class="text-center sm:text-xl text-2xs">{ punctuation }</h2>
+            <p class="text-center italic sm:text-xl text-2xs">{ description }</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    
+
+    .testimoniouno {
+        background-image: url('../assets/libs/imgs/1000343281-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .testimoniodos {
+        background-image: url('../assets/libs/imgs/1000343281-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .testimoniotres {
+        background-image: url('../assets/libs/imgs/1000343281-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .testimoniocuatro {
+        background-image: url('../assets/libs/imgs/1000343281-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .testimoniocinco {
+        background-image: url('../assets/libs/imgs/1000343281-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+</style>

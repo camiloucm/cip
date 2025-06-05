@@ -1,0 +1,68 @@
+---
+import BotomAction from "./BotomAction.astro"
+
+interface Props {
+    titleSection?: string;
+    titleCard: string;
+    p1: string;
+    p2?: string;
+    BtUrl: string;
+    BtValue: string;
+    BtBg: string;
+}
+
+const { titleCard, titleSection, BtUrl, p1, p2, BtValue, BtBg } = Astro.props;
+---
+
+<section class="flex m-auto justify-center sm:w-[50%] w-4/5 h-auto sm:mt-2 sm:translate-x-[10px] translate-x-[20px]">
+    <article class="flex sm:flex-row flex-col border-3 sm:m-12 m-6 border-primary sm:h-[500px] h-[700px] w-full">
+        
+        <div class="
+            flex sm:flex-row flex-col 
+            sm:gap-20 gap-5 
+            border-y-24 sm:border-b-24 border-l-12 border-white bg-white
+            sm:translate-x-[-100px] translate-x-[-50px] 
+            my-7
+            sm:h-auto h-[1000px]"
+            >
+            <div class="sm:w-[600px] w-full sm:h-full h-[200px] sm:border-8 border-5 border-primary">
+                <div class="bgimage w-full h-full bg-cover bg-center"></div>
+            </div>
+
+            <div class="flex flex-col justify-center items-center sm:w-[70%] w-4/5 text-center text-secondary">
+                <h2 class="sm:text-title text-xl font-bold mb-8">
+                    { titleCard }
+                </h2>
+                
+                <p class="text-center sm:text-xl text-2xs">
+                    { p1 }
+                </p>
+
+                <p class="text-center sm:text-xl text-2xs">
+                    { p2 }
+                </p>
+
+                <div class="w-{40%}">
+                    <BotomAction 
+                        urlDestino={ BtUrl }
+                        value={ BtValue }
+                        bg={ BtBg }
+                    />
+                </div>
+            </div>
+        </div>
+        
+    </article>
+</section>
+
+<style>
+    p {
+        margin-bottom: 14px;
+    }
+
+    .bgimage {
+        background-image: url('../../assets/libs/imgs/340195972.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+</style>

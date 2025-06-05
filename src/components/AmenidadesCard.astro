@@ -1,0 +1,59 @@
+---
+interface Props {
+    imageUrl: string;
+}
+
+const { imageUrl } = Astro.props;
+---
+
+<section class="flex ms:flex-row flex-col justify-center items-center w-screen habitacionAmenidades">   
+
+    <article class="flex sm:flex-row flex-col justify-center items-center w-full h-full bg-secondary/80">
+        <div class="flex sm:flex-row flex-col justify-center items-center m-auto gap-12 sm:w-1/2 w-4/5 h-full py-5">
+            <div class="text-white text-center sm:w-1/2 w-full">
+                
+
+
+                <h1 class="sm:text-title text-xl font-bold mb-8 sm:w-[60%] w-full m-auto">Comodidades que marcan la diferencia</h1>
+                    <div class="flex flex-col gap-7 sm:text-3xs text-2xs sm:w-1/2 w-full m-auto">
+                        <p>Piscina al aire libre para refrescarte en cualquier momento</p>
+                        <p>Jardín y terraza donde puedes relajarte o leer un buen libro</p>
+                        <p>Sala común para compartir o descansar</p>
+                        <p>Estacionamiento privado sin costo adicional</p>
+                        <p>Pet friendly and gay friendly </p>
+                        <p>Libre de humo (prohibido fumar)</p>
+                        <p>Instalaciones con excelente limpieza</p>
+                        <p>Transporte al aeropuerto disponible por $30 USD (requiere solicitud previa)</p>
+                    </div>
+            </div>
+
+            <div class="flex flex-col gap-5 sm:w-1/2 w-full items-center">
+                <div class="border-6 border-primary w-80 h-48 bg-cover bg-center">
+                    <div class="HabitacionesC1 w-full h-full object-cover bg-center"></div>
+                </div>
+
+                <div class="border-6 border-primary w-80 h-48 bg-cover bg-center">
+                    <div class="HabitacionesC1 w-full h-full object-cover bg-center"></div>
+                </div>
+
+                <div class="border-6 border-primary w-80 h-48 bg-cover bg-center">
+                    <div class="HabitacionesC1 w-full h-full object-cover bg-center"></div>
+                </div>
+            </div>
+        </div>
+    </article> 
+</section>
+
+<style>
+    .habitacionAmenidades {
+        background-image: url('../assets/libs/imgs/1000343291.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .HabitacionesC1 {
+        background-image: url('../assets/libs/imgs/1000343286-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+</style>

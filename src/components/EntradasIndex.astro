@@ -1,0 +1,57 @@
+---
+interface Props {
+    title: string;
+    content: string;
+    imageUrl?: string;
+    urlDestino: string;
+}
+
+const { title, content, imageUrl, urlDestino } = Astro.props as Props;
+---
+
+<section class="flex flex-col justify-center items-center w-full sm:h-full h-[600px]">
+    <article class="flex flex-col items-center justify-center gap-4 w-full sm:h-4/5 h-full text-secondary">
+        <div class=" h-full w-full overflow-hidden border-6 border-primary hover:border-secondary transition-all duration-500">
+            <div class="bgimage flex items-end w-full sm:h-full h-[300px] object-cover bg-cover bg-center hover:scale-125 transition-all duration-500 relative">
+                <div class="flex flex-col items-center justify-center p-8 w-[48px] h-[48px] bg-primary text-white absolute sm:mb-0 mb-3">
+                    <h1 class="text-3xl translate-y-1 -translate-x-1">12</h1>
+                    <h2 class="font-bold -translate-y-1 -translate-x-1">ABR</h2>
+                </div>
+                <div class="flex w-full h-full hover:bg-primary/60 transition-all duration-500"></div>
+            </div>
+        </div>
+
+        <a href="#" class="flex w-4/5 ">
+            <h2 class="font-bold text-center sm:text-1xl text-[18px] hover:text-primary hover:translate-y-[-1] transition-all duration-500">
+                { title}
+            </h2>
+        </a>
+        
+        <div class="flex flex-col items-start justify-center gap-4">
+            <a href="#">
+                <p class="sm:text-xs text-2xs">
+                    { content }
+                </p>
+            </a>
+
+            <div class="flex justify-between w-full">
+                <a href={ urlDestino } class="font-bold text-secondary text-1xs uppercase hover:text-primary hover:ml-1 transition-all duration-500">
+                    Leer más...
+                </a>
+
+                <a href="#">
+                    <i class="hover:text-primary hover:mr-1 transition-all duration-500 text-xl font-bold fa-solid fa-plus"></i>
+                </a>
+            </div>
+        </div>
+    </article>
+
+</section>
+
+<style>
+    .bgimage {
+        background-image: url('../assets/libs/imgs/1000343281-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+</style>

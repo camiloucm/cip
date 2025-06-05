@@ -1,0 +1,161 @@
+<section class="mt-16 w-full">
+    <article class="flex flex-col m-auto items-center w-4/5">
+        <h1 class="uppercase text-title text-secondary font-bold text-center">
+            Consulta tu disponibilidad
+        </h1>
+
+        
+
+
+
+
+
+
+
+        <div class="flex items-center justify-center sm:w-4/5 w-full">
+            <div class="flex sm:flex-row flex-col w-full sm:h-30 h-full sm:mt-16 mt-8 bg-primary items-center justify-center">
+                <form class="flex sm:flex-row flex-col items-center justify-center sm:gap-30 gap-5 my-12 sm:my-0">
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <div class="flex justify-center items-center gap-3">
+                            <i class="fa-solid fa-person-walking-arrow-right text-white text-2xs"></i>
+                            <label for="checkin" class="text-white text-2xs">Check In</label>
+                        </div>
+
+                        <input id="checkin" type="date" name="check-in" value="" min="today" class="btn-checkinout text-secondary" required>
+                    </div>                   
+                    
+                    <div class="flex flex-col items-center justify-center gap-2">
+                    <div class="flex justify-center items-center gap-3">
+                        <i class="fa-solid fa-person-walking-arrow-loop-left text-white text-2xs"></i>
+                        <label for="checkout" class="text-white text-2xs">Check Out</label>
+                    </div>
+
+                    <input id="checkout" type="date" name="check-out" value="" min="today" class="btn-checkinout text-secondary" required>
+
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <div class="flex justify-center items-center gap-3">
+                            <i class="fa-solid fa-bed text-white text-2xs"></i>
+                            <label for="pax" class="text-white text-2xsp">Huespedes</label>
+                        </div>
+
+                        <select name="pax" id="pax" class="btn-checkinout text-secondary" required>
+                            <option value="0" hidden>Personas</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>    
+                            <option value="4">4</option>    
+                            <option value="5">5</option>    
+                        </select>
+                    </div>
+                    
+                    <div class="flex justify-center items-center bg-secondary w-auto h-auto py-2 px-10 rounded-full border-1 border-white cursor-pointer">
+                        <button onclick="dialog.showModal()" class="text-white cursor-pointer">
+                            Consultar viejo
+                        </button>
+                    </div>
+                </form> 
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
+        <!-- <div class="flex justify-center items-center bg-secondary w-full h-full py-2 px-10 rounded-full border-1 border-white cursor-pointer">
+            <button onclick="dialog.showModal()" class="text-white cursor-pointer">
+                Consultar nuevo
+            </button>
+        </div> -->
+
+        <div>
+            <dialog id="dialog">
+                <div  class="container">
+                    <div class="pagination">
+                        <div id="circulos" class="circulo1 active">
+                            <h1>1</h1>
+                        </div>
+
+                        <div id="circulos" class="circulo2">
+                            <h1>2</h1>
+                        </div>
+                    </div>
+
+                    <div class="paginas pagina1 popup-active">
+                        <h1>
+                            El resumen de tu sumatoria es el siguiente:
+                        </h1>
+                    
+                        <p>
+                            Deseas sumar 
+                            <span class="pagValor1"></span>
+                            <span>  +  </span>
+                            <span class="pagValor2">ux</span>
+                        </p>
+                    
+                        <div class="container-botones">
+                            <button onclick="dialog.close()">Cerrar</button>
+                            <button class="boton-confirmar">confirmar</button>
+                        </div>
+                    </div>
+
+                    <div class="paginas pagina2 popup-inactive">
+                        <h1>Resultado</h1>
+
+                        <p>
+                            Tu resultado de sumar 
+                            <span id="span1"></span> 
+                            + 
+                            <span id="span2"> es igual a: </span>
+                            <span id="resultado"></span>
+                        </p>
+
+                        <h1>Promedio</h1>
+                        <p>
+                            El promerio es: 
+                            <span id="promedio"></span>
+                        </p>
+
+                        <button onclick="dialog.close()">Finalizar</button>
+                    </div>
+                </div>
+            </dialog>
+        </div>
+        
+    </article>
+</section>
+
+
+
+<style>
+    .btn-checkinout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 200px;
+    }
+</style>

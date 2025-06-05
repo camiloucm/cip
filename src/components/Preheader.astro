@@ -1,0 +1,53 @@
+---
+import Logocompleto from "../assets/libs/icons astro/Logocompleto.astro"
+import PreHeaderSocialMedia from "./Header/PreHeader/PreHeaderSocialMedia.astro"
+import PreHeaderContact from "./Header/PreHeader/PreHeaderContact.astro"
+---
+
+
+
+<div class="container mx-auto flex justify-center items-center py-6 w-4/5 text-primary pl-12">
+    <div class="flex lg:flex-row flex-col justify-between items-center w-full">
+        <div>
+            <a href="index.html" class="flex items-center">
+                <i class="w-48 text-prymary">
+                    <Logocompleto />
+                </i>
+                <!-- <img src="../assets/libs/icons astro/logocompleto.astro" alt="img"> -->
+                <!-- <span class="font-bold text-3xl ">Ascent</span> -->
+            </a>
+        </div>
+        
+        <div>
+            <ul class="flex gap-7.5">
+                <PreHeaderContact 
+                    href_contact="tel:+573128384661" 
+                    icon_contact="fa-solid fa-phone" 
+                    title_contact="Llámanos"
+                    text_contact="(507) 0000-0000" 
+                    />
+                <PreHeaderContact 
+                    href_contact="https://www.google.com/maps/place/plaza+70/@5.0504414,-75.4861049,17z/data=!3m1!4b1!4m6!3m5!1s0x8e47657786d86a8f:0x4a2bd5a37e31f3e6!8m2!3d5.0504414!4d-75.48353!16s%2Fg%2F11csr13mtd?entry=ttu&g_ep=EgoyMDI1MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
+                    icon_contact="fa-solid fa-location-dot" 
+                    title_contact="Ubícanos"
+                    text_contact="Calle Ernesto J. Castillero"
+                    text_contact_br="Casa 07, Ancón, Panamá" 
+                    />
+                <PreHeaderContact 
+                    href_contact="mailto:camiloucm@hotmail.es?subject=INFORMACIÓN DE HOSPEDAJE&body=Estuve visitando tu página y deseo conocer la siguiente información: " 
+                    icon_contact="fa-solid fa-envelope" 
+                    title_contact="Escíbenos"
+                    text_contact="contactenos@canalinn.com"
+                    />
+            </ul>
+        </div>
+
+        <div>
+            <ul class="flex items-center gap-1">
+                <PreHeaderSocialMedia link_socialmedia="https://www.facebook.com" icon_socialmedia="fa-brands fa-facebook-f" />
+                <PreHeaderSocialMedia link_socialmedia="https://www.instagram.com" icon_socialmedia="fa-brands fa-instagram" />
+                <PreHeaderSocialMedia link_socialmedia="https://wa.me/+573128384661" icon_socialmedia="fa-brands fa-whatsapp" />
+            </ul>
+        </div>
+    </div>
+</div>

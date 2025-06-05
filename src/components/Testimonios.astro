@@ -1,0 +1,85 @@
+---
+import Testimoniodecliente from './Testimoniodecliente.astro';
+---
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+
+<section class="w-screen h-1/2 mt-[80px] testimonioscover">   
+
+        <div class=" swiper testimonios w-full h-full bg-secondary/70">
+            <h1 class="uppercase font-bold text-white sm:text-title text-xl text-center sm:mt-12 mt-9 sm:w-full w-4/5 m-auto">
+                Referencia de nuestros clientes
+            </h1>
+
+                <div class="swiper-wrapper ">
+                        
+
+                        <Testimoniodecliente 
+                            title='Ideal para viajes cortos' 
+                            punctuation="Puntuación: 10-10"
+                            description='El trato siempre tan amable y atento, siempre dispuestos a ayudar y colaborar entonces, incluso desde antes de realizar el viaje ya estaban pendientes del traslado de aeropuerto al hostal.' 
+                            imageUrl='../../assets/libs/imgs/1000343281-2.png' 
+                            imageClass='testimoniouno'
+                        />
+
+                        <Testimoniodecliente 
+                            title='Ideal para viajes cortos' 
+                            punctuation="Puntuación: 9-10"
+                            description='Excelente lugar para dormir y para pasar la noche, el trato es muy amable y el lugar es muy limpio. El desayuno es muy bueno y la atención es excelente.' 
+                            imageUrl='../../assets/libs/imgs/1000343281-2.png' 
+                            imageClass='testimoniodos'
+                        />
+
+                        <Testimoniodecliente 
+                            title='Ideal para viajes cortos' 
+                            punctuation="Puntuación: 8-10"
+                            description='Un lugar,muy atractivo para pasar el tiempo, el trato es muy amable y el lugar es muy limpio. El desayuno es muy bueno y la atención es excelente.'
+                            imageUrl='../../assets/libs/imgs/1000343281-2.png' 
+                            imageClass='testimoniotres'
+                        />
+
+                        <Testimoniodecliente 
+                            title='Ideal para viajes cortos' 
+                            punctuation="Puntuación: 7-10"
+                            description='Espectacular para venir y salir, el trato es muy amable y el lugar es muy limpio. El desayuno es muy bueno y la atención es excelente.'
+                            imageUrl='../../assets/libs/imgs/1000343281-2.png' 
+                            imageClass='testimoniocuatro'
+                        />
+
+                        <Testimoniodecliente 
+                            title='Ideal para viajes cortos' 
+                            punctuation="Puntuación: 6-10"
+                            description='Una luna de miel espectacular, el trato es muy amable y el lugar es muy limpio. El desayuno es muy bueno y la atención es excelente.'
+                            imageUrl='../../assets/libs/imgs/1000343281-2.png' 
+                            imageClass='testimoniocinco'
+                        />
+                </div>
+
+
+
+            <div class="swiper-pagination sm:mb-6 mb-3 sm:visible invisible"></div>
+        </div> 
+</section>
+
+
+<style>
+    .testimonioscover {
+        background-image: url('../assets/libs/imgs/1000343281-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .testimonios .swiper-pagination {
+        --swiper-pagination-color: var(--color-white);
+        --swiper-pagination-bullet-size: 15px;
+        --swiper-pagination-bullet-opacity: 70%;
+        --swiper-pagination-bullet-inactive-color: var(--color-primary);
+        --swiper-pagination-bullet-inactive-opacity: 30%;
+        --swiper-pagination-bullet-horizontal-gap: 8px;
+    }
+
+  
+  
+</style>

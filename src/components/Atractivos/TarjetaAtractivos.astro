@@ -1,0 +1,52 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    imageUrl?: string;
+    imgClass: string;
+}
+
+const { title, description, imageUrl, imgClass } = Astro.props as Props;
+---
+
+<section class="flex sm:flex-row flex-col justify-center items-center sm:gap-14 gap-10 sm:mt-10 text-secondary sm:w-4/5 w-full">
+    <article class="sm:w-1/2 sm:h-72 w-full h-[200px]">
+        <div
+            class=`${ imgClass } w-full h-full sm:mt-0 mt-7 bg-cover bg-center border-6 border-primary`>
+        </div> 
+    </article>
+
+    <article class="sm:w-1/2 w-full text-secondary">
+        <h3 class="uppercase font-bold  my-3 text-center sm:text-title text-[17px]">{ title }</h3>
+        <p class="text-center sm:text-xl text-2xs">
+            { description }
+        </p>
+    </article>
+</section>
+
+<style>
+    .atractivouno {
+        background-image: url(../../assets/libs/imgs/1000343287-2.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .atractivodos {
+        background-image: url(../../assets/libs/imgs/1000343287-2.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .atractivotres {
+        background-image: url(../../assets/libs/imgs/1000343287-2.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .atractivocuatro {
+        background-image: url(../../assets/libs/imgs/1000343287-2.png);
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+

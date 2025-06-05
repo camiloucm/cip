@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroPages from "../components/HeroPages.astro";
+import Cardfaq from "../components/components gegnerales/CardFaq.astro";
+---
+
+<Layout title="faq">
+    <HeroPages title="Preguntas Frecuentes" />
+
+    <section class="w-full">
+        <article class="flex flex-col justify-center items-center w-4/5 m-auto gap-7">
+            <Cardfaq 
+                question="¿Con qué metodos de pago puedo pagar mi hospedaje?"
+                answer="Puedes pagar tu habitación de forma online o en persona. Para hacerlo online, puedes utilizar el método de pago de tu tarjeta de crédito o débito. Para pagar en persona, puedes hacerlo a través de un cajero en línea o a través de una oficina de cajeros."
+            />
+
+            <Cardfaq 
+                question="¿Con qué metodos de pago puedo pagar mi hospedaje?"
+                answer="Puedes pagar tu habitación de forma online o en persona. Para hacerlo online, puedes utilizar el método de pago de tu tarjeta de crédito o débito. Para pagar en persona, puedes hacerlo a través de un cajero en línea o a través de una oficina de cajeros."
+            />
+
+            <Cardfaq 
+                question="¿Con qué metodos de pago puedo pagar mi hospedaje?"
+                answer="Puedes pagar tu habitación de forma online o en persona. Para hacerlo online, puedes utilizar el método de pago de tu tarjeta de crédito o débito. Para pagar en persona, puedes hacerlo a través de un cajero en línea o a través de una oficina de cajeros."
+            />
+        </article>
+    </section>
+</Layout>

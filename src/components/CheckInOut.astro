@@ -1,0 +1,248 @@
+<section class="mt-16 w-full">
+    <article class="flex flex-col m-auto items-center w-4/5">
+        <h1 class="uppercase text-title text-secondary font-bold text-center">
+            Consulta tu disponibilidad
+        </h1>
+
+        <div class="flex items-center justify-center sm:w-4/5 w-full">
+            <div class="flex sm:flex-row flex-col w-full sm:h-30 h-full sm:mt-16 mt-8 bg-primary items-center justify-center sm:gap-30">
+                <form class="flex sm:flex-row flex-col items-center justify-center sm:gap-30 gap-5 my-12 sm:my-0">
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <div class="flex justify-center items-center gap-3">
+                            <i class="fa-solid fa-person-walking-arrow-right text-white text-2xs"></i>
+                            <label for="checkin" class="text-white text-2xs">Check In</label>
+                        </div>
+
+                        <input id="checkin" type="date" name="check-in" value="" min="today" class="btn-checkinout text-secondary" required>
+                    </div>                   
+                    
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <div class="flex justify-center items-center gap-3">
+                            <i class="fa-solid fa-person-walking-arrow-loop-left text-white text-2xs"></i>
+                            <label for="checkout" class="text-white text-2xs">Check Out</label>
+                        </div>
+
+                        <input id="checkout" type="date" name="check-out" value="" min="today" class="btn-checkinout text-secondary" required>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <div class="flex justify-center items-center gap-3">
+                            <i class="fa-solid fa-bed text-white text-2xs"></i>
+                            <label for="pax" class="text-white text-2xsp">
+                                Huespedes
+                            </label>
+                        </div>
+
+                        <select name="pax" id="pax" class="btn-checkinout text-secondary" required>
+                            <option value="0" hidden>Personas</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>    
+                            <option value="4">4</option>    
+                            <option value="5">5</option>    
+                        </select>
+                    </div>
+                    
+                 
+                </form> 
+
+            
+                    <button id="consult" onclick="dialog.showModal()" class="sm:mb-0 mb-14">
+                        Consultar
+                    </button>
+               
+            </div>
+        </div>
+    </article>
+
+    <article id="blackgroundDialog" class="invisible bg-black/70 flex justify-center items-center w-screen h-screen top-0 left-0 z-1000 fixed transition-all duration-50 ease-in-out">
+        <dialog id="dialog" class=" bg-white sm:w-1/2 w-full z-50 fixed justify-center items-center pt-9 m-auto transition-all duration-500 ease-in-out">
+            <div class="flex justify-center items-center">  
+                <div class="container-dialog flex flex-col items-center w-4/5 h-auto">
+                    <div class="pagination flex justify-center itmes-start gap-4">
+                        <div id="circle-active" class="circle-active circles">
+                            <h1>1</h1>
+                        </div>
+
+                        <div id="separatorPagination" class="circle-inactive border-1 border-primary h-0 w-[100px] mt-4"></div>
+
+                        <div id="circle-inactive" class="circle-inactive circles">
+                            <h1>2</h1>
+                        </div>
+                    </div>
+
+                    <div class="pages PageOne dialog-active mt-8">
+                        <h1 class="text-center font-bold text-title">
+                            Tus datos de reserva son los siguiente:
+                        </h1>
+                    
+                        <div class="flex flex-col items-center gap-7 mt-7">
+                            <div class="flex flex-col justify-center items-center gap-3">
+                                <div class="flex justify-center items-center gap-3">
+                                    <i class="fa-solid fa-person-walking-arrow-right text-secondary text-2xs"></i>
+                                    <p class="text-secondary font-bold text-2xs">
+                                        Fecha de ingreso: 
+                                    </p>
+                                </div>
+                                <span id="spanCheckIn" class="text-secondary text-2xl">121212</span>
+                            </div>
+
+                            <div class="flex flex-col justify-center items-center gap-3">
+                                <div class="flex justify-center items-center gap-3">
+                                    <i class="fa-solid fa-person-walking-arrow-loop-left text-secondary text-2xs"></i>
+                                    <p class="text-secondary font-bold text-2xs">
+                                        Fecha de salida: 
+                                    </p>
+                                </div>
+                                <span id="spanChekOut" class="text-secondary text-2xl">131313</span>
+                            </div>
+
+                            <div class="flex flex-col justify-center items-center gap-3">
+                                <div class="flex justify-center items-center gap-3">
+                                    <i class="fa-solid fa-bed text-secondary text-2xs"></i>
+                                    <p class="text-secondary font-bold text-2xs">
+                                        Cantidad de huspedes: 
+                                    </p>
+                                </div>
+                                
+                                <div class="flex items-center gap-2">
+                                    <span id="spanPax" class="text-secondary text-2xl"></span>
+                                
+                                    <p class="text-secondary text-2xl">
+                                        Personas
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="container-botones flex justify-center items-center gap-7 mb-10">
+                                <button id="closePageOne" onclick="dialog.close()">Regresar</button>
+                                <button class="nextPage">Siguiente</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pages PageTwo dialog-inactive mt-8">
+                        <h1 class="text-center font-bold text-title">
+                            Tu valor a pagar es el siguiente:
+                        </h1>
+                    
+                        <div class="flex flex-col items-center gap-7 mt-7">
+                            <div class="flex flex-col justify-center items-center gap-3">
+                                <div class="flex justify-center items-center gap-3">
+                                    <i class="fa-solid fa-bed text-secondary text-2xs"></i>
+                                    <p class="text-secondary font-bold text-2xs">
+                                        Valor por hospedaje total: 
+                                    </p>
+                                </div>
+
+                                <p class="text-secondary text-2xl">
+                                    $
+                                    <span id="spanCost" class="text-secondary text-2xl"></span>
+                                </p>
+                            </div>
+
+                            <div class="flex flex-col justify-center items-center gap-3">
+                                <div class="flex justify-center items-center gap-3">
+                                    <i class="fa-solid fa-calculator text-secondary text-2xs"></i>
+                                    <p class="text-secondary font-bold text-2xs">
+                                        Valor por impuestos: 
+                                    </p>
+                                </div>
+                                
+                                <p
+                                    class="text-secondary text-2xl">
+                                    $
+                                    <span id="spanTax" class="text-secondary text-2xl"></span>
+                                </p>
+                            </div>
+
+                            <div class="flex flex-col justify-center items-center gap-3">
+                                <div class="flex justify-center items-center gap-3">
+                                    <i class="fa-solid fa-circle-dollar-to-slot text-secondary text-2xs"></i>
+                                    <p class="text-secondary font-bold text-2xs">
+                                        Valor total a pagar: 
+                                    </p>
+                                </div>
+                                <p class="text-secondary text-2xl">
+                                    $ 
+                                    <span id="spanTotal" class="text-secondary text-2xl"></span>
+                                </p>
+                            </div>
+                            
+                            <div class="container-botones flex justify-center items-center gap-7 mb-10">
+                                <button id="sendReservation" onclick="dialog.close()" class="sentReservation">Realizar Reserva</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            
+            
+        </dialog>
+    </article>
+</section>
+
+<script src="../assets/js/dialogReservation.js"></script>
+
+<style>
+    .btn-checkinout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 200px;
+    }
+
+    button {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        background-color: var(--color-secondary);
+        width: auto;
+        height: auto;
+        padding: 8px 40px;
+        border: 1px solid;
+        border-color: var(--color-white);
+        border-radius: 30px;
+        cursor: pointer;
+        color: var(--color-white);
+    }
+
+    .circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: var(--color-primary) solid 2px;
+    border-radius: 50%;
+
+        h1 {
+            color: var(--color-secondary);
+            font-size: 15px;
+        }
+    }
+
+    .circle-active {
+        background-color: var(--color-secondary);
+        color: white;
+
+        h1 {
+            color: white;
+        }
+    }
+
+    #closePageOne {
+        background-color: var(--color-white);
+        border-color: var(--color-secondary);
+        color: var(--color-secondary);
+    }
+
+    .dialog-inactive {
+        display: none;
+    }
+</style>

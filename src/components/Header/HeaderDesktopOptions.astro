@@ -1,0 +1,18 @@
+---
+interface Props {
+    page_open: string;
+    page_title: string;
+}
+
+const { page_open, page_title } = Astro.props;
+---
+
+
+<li class="leading-[164%] relative hover:text-secondary hover:scale-110 transition-all duration-500">
+    <a  href={ page_open } 
+        class="text-lg">
+        { page_title }
+    </a>
+</li>
+
+

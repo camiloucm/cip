@@ -1,0 +1,53 @@
+---
+import BotomAction from './components gegnerales/BotomAction.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  imageUrl?: string;
+  bg: string;
+  border: string;
+  textColor: string;
+  urlBotom: string;
+  actionBotom: string;
+  bgBotom: string;
+}
+
+const { title, description, imageUrl, bg, border, textColor, urlBotom, actionBotom, bgBotom } = Astro.props;
+---
+
+<section class=`flex sm:flex-row flex-col justify-center items-center w-full ${ bg }`>
+    <article class="flex sm:flex-row flex-col justify-center items-center text-center sm:w-1/2 w-full">
+        <div class="flex justify-center items-center sm:w-1/2 w-full sm:h-full sm:p-10">
+            <div class= `border-6 w-full sm:h-85 h-50 bg-cover bg-center ${ border }`>
+                <div class=`${ imageUrl } w-full h-full object-cover bg-center`></div>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center sm:w-1/2 w-full h-full p-10">
+            <h1 class=`sm:text-title text-xl font-bold mb-6 sm:w-4/5 w-full ${ textColor }`>
+                { title }
+            </h1>
+
+            <p class=`sm:text-xl text-2xs mb-6 ${ textColor }`>
+                { description }
+            </p>
+
+            <div class="w-1/2">
+                <BotomAction 
+                    urlDestino={ urlBotom }
+                    value={ actionBotom }
+                    bg={ bgBotom }
+                />
+            </div>
+        </div>
+    </article>
+</section>
+
+<style>
+    .habitacionImagen {
+        background-image: url('../assets/libs/imgs/1000343286-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+</style>

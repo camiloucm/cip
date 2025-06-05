@@ -1,0 +1,42 @@
+---
+interface Props {
+    urlDestino?: string;
+    value: string;
+    bg: string;
+}
+
+const { urlDestino, value, bg } = Astro.props as Props;
+---
+
+<section class=`flex justify-center items-center w-full h-full py-1.5 px-10 rounded-full cursor-pointer transition-all duration-500 ${ bg } `>
+    <a href={ urlDestino }>
+        <input 
+            class="cursor-pointer"
+        
+            type="submit" 
+            value={ value } 
+        >   
+    </a>
+</section>
+
+<style>
+    .secondary {
+        background-color: var(--color-secondary);
+        color: var(--color-white);
+    }
+
+    .secondary:hover {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+    }
+
+    .primary {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+    }
+
+    .primary:hover {
+        background-color: var(--color-secondary);
+        color: var(--color-white);
+    }
+</style>

@@ -1,0 +1,113 @@
+---
+import '../styles/global.css'
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BackToUp from '../components/BackToUp.astro';
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{ title } | Canal Inn Panamá Hostal</title>
+		<script src="https://kit.fontawesome.com/6fac018e98.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+		<link rel="stylesheet" href="assets/css/animate.css">
+	</head>
+	<body>
+        <Header />
+        <BackToUp />
+		<slot />
+        <Footer />
+
+
+        <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="../assets/js/swiper.js"></script>
+        <script src="../assets/js/testimonials.js"></script>
+
+        <script src="../assets/js/animate.js"></script>
+		<script src="../assets/js/wow.min.js"></script>
+		<script src="../assets/js/main.js"></script>
+        <script src="../assets/js/today.js"></script>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+        background-color: #fff0e5;
+	}
+
+	.btn {
+        position: relative;
+        z-index: 10;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.5s ease-in-out;
+        padding: 6px 3px;
+        border-radius: 5px;
+        overflow: hidden;
+        max-height: 60px;
+    }
+
+    .btn::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: var(--secondary);
+        width: 0%;
+        height: 100%;
+        z-index: -1;
+        transition: all 0.5s ease-in-out;
+        border-radius: 6px;
+    }
+
+    .btn:hover::after {
+        width: 100%;
+    }
+
+    .btn:hover {
+        color: var(--cream-foreground);
+    }
+
+    .btn-rounded-full{
+        max-height: 60px;
+        z-index: 10;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.5s ease-in-out;
+        padding: 20px 30px;
+        border-radius: 45px;
+        background-color: var(--primary);
+        color: var(--cream-foreground);
+        line-height: normal;
+        border: 2px solid transparent;
+    }
+    .btn-rounded-full:hover{
+        background-color: transparent;
+        color: var(--primary-foreground);
+        border: 2px solid var(--primary);
+    }
+
+    @media(max-width:1024px){
+        .btn, .btn-rounded-full{
+            padding: 10px 30px;
+        }
+    }
+</style>

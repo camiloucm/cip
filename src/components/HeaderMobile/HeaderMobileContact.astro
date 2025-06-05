@@ -1,0 +1,16 @@
+---
+interface Props {
+    page_open: string;
+    icon_contact: string;
+    text_contact: string;
+}
+
+const { page_open, icon_contact, text_contact } = Astro.props;
+---
+
+<li>
+    <p>
+        <i class=`${ icon_contact } text-primary`></i> 
+        <a href={ page_open } target="_blank" rel="noreferrer" class="ml-2.5">{ text_contact }</a>
+    </p>
+</li>

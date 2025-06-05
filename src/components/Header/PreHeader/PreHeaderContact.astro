@@ -1,0 +1,31 @@
+---
+interface Props {
+    href_contact: string;
+    icon_contact: string;
+    title_contact: string;
+    text_contact: string;
+    text_contact_br?: string;
+}
+
+const { href_contact, icon_contact, text_contact, text_contact_br, title_contact } = Astro.props;
+---
+
+<li class="flex flex-row">
+    <a href={ href_contact } class="text-prymary flex flex-row justify-center items-center gap-4 hover:scale-105 transition-all duration-500" target="_blank" rel="noreferrer">
+        <div class="flex items-center">
+            <span class="flex items-center justify-center">
+                <i class=`text-[40px] ${icon_contact}`></i>
+            </span>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <span class="font-bold"> { title_contact } </span>
+
+            <span>
+                { text_contact }
+                <br>
+                    { text_contact_br }
+            </span>
+        </div> 
+    </a>
+</li>
