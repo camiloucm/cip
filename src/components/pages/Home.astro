@@ -1,0 +1,23 @@
+---
+import Hero from '../../components/Hero.astro';
+import CheckInOut from '../../components/CheckInOut.astro';
+import Bienvenida from '../../components/Bienvenida.astro';
+import Atractivos from '../../components/Atractivos.astro';
+import Testimonios from '../../components/Testimonios.astro';
+import BlogIndex from '../../components/BlogIndex.astro';
+
+interface Props {
+    class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<section class={ className }>
+    <Hero />
+	<CheckInOut />
+	<Bienvenida />
+	<Atractivos />
+	<Testimonios />
+	<BlogIndex />
+</section>

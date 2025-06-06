@@ -1,11 +1,20 @@
 ---
-interface Props {
+/* interface Props {
     page_open: string;
     page_title: string;
 }
 
-const { page_open, page_title } = Astro.props;
+const { page_open, page_title } = Astro.props; */
+
+interface Props {
+  page_title: string;
+}
+
+const { page_title } = Astro.props;
+console.log("page_title:", page_title); // Para debug
+const page_open = page_title.toLowerCase(); // Convierte a minúsculas
 ---
 <li class="leading-[164%] relative w-full ">
-    <a href={ page_open } class="text-secondary font-jost hover:text-secondary-foreground transition-all duration-500 py-2.5 block border-b border-b-secondary/30 hover:ml-1 hover:text-primary">{ page_title }</a>
+    <!-- <a href={ page_open } class="text-secondary font-jost hover:text-secondary-foreground transition-all duration-500 py-2.5 block border-b border-b-secondary/30 hover:ml-1 hover:text-primary">{ page_title }</a> -->
+     <a href={`/${page_open}`} class="text-secondary font-jost hover:text-secondary-foreground transition-all duration-500 py-2.5 block border-b border-b-secondary/30 hover:ml-1 hover:text-primary">{page_title}</a>
 </li>

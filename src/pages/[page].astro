@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nosotros from './nosotros.astro';
+import Habitaciones from './habitaciones.astro';
+import Blog from './blog.astro';
+import Contactanos from './contactanos.astro';
+import Faq from './faq.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { page: 'nosotros' } },
+    { params: { page: 'habitaciones' } },
+    { params: { page: 'blog' } },
+    { params: { page: 'contactanos' } },
+    { params: { page: 'faq' } },
+  ];
+}
+
+interface Props {
+  page: string;
+}
+
+const { page } = Astro.params as Props;
+
+---
+
+<Layout title={page}>
+  {page === 'nosotros' && <Nosotros />}
+  {page === 'habitaciones' && <Habitaciones />}
+  {page === 'blog' && <Blog />}
+  {page === 'contactanos' && <Contactanos />}
+  {page === 'faq' && <Faq />}
+  {/* Manejo de error: Si la página no existe */}
+  { !['nosotros', 'habitaciones', 'blog', 'contactanos', 'faq'].includes(page) &&
+    <div>
+      <h1>Página no encontrada</h1>
+      <p>Lo sentimos, la página "{page}" no existe.</p>
+    </div>
+  }
+</Layout>

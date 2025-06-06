@@ -1,12 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import HeroPages from '../components/HeroPages.astro';
-import TarjetaBienvenida from '../components/components gegnerales/TarjetaBienvenida.astro';
-import BotomAction from '../components/components gegnerales/BotomAction.astro';
+import TarjetaBienvenida from '../../components/components gegnerales/TarjetaBienvenida.astro';
+import BotomAction from '../../components/components gegnerales/BotomAction.astro';
+
+interface Props {
+    class?: string;
+}
+
+const { class: className } = Astro.props;
 ---
 
-<Layout title=Nosotros>
-	<HeroPages title='Nosotros'/>
+<section class={className}>
     <TarjetaBienvenida 
         titleCard='Bienvenido a Canal Inn Hostal Panamá'
         p1='Tu hospedaje acogedor, cómodo y bien ubicado en la ciudad'
@@ -16,8 +19,8 @@ import BotomAction from '../components/components gegnerales/BotomAction.astro';
         BtBg='secondary'
     />
 
-    <section class="flex sm:flex-row flex-col justify-center items-center w-full -mt-2">
-        <article class="flex sm:flex-row flex-col justify-center items-center text-center sm:w-1/2 w-full">
+    <article class="flex sm:flex-row flex-col justify-center items-center w-full -mt-2">
+        <div class="flex sm:flex-row flex-col justify-center items-center text-center sm:w-1/2 w-full">
             <div class="flex flex-col justify-center items-center sm:w-[40%] w-full h-full p-10">
                 <h1 class="sm:text-title text-xl font-bold text-primary mb-4 sm:w-4/5 w-full">
                     Tu descanso comienza aquí
@@ -57,11 +60,11 @@ import BotomAction from '../components/components gegnerales/BotomAction.astro';
                     <div class="Nosotrosuno w-full h-full object-cover bg-center"></div>
                 </div>
             </div>
-        </article>
-    </section>
+        </div>
+    </article>
 
-    <section class="flex items-center justify-center bg-secondary">
-        <article class="text-white text-center py-15 sm:w-full w-4/5">
+    <article class="flex items-center justify-center bg-secondary">
+        <div class="text-white text-center py-15 sm:w-full w-4/5">
             <h1 class="sm:text-title text-xl sm:mb-15 mb-7">Comodidades que marcan la diferencia</h1>
             <div class="flex flex-col gap-3 sm:text-xl text-2xs">
                 <p>Piscina al aire libre para refrescarte en cualquier momento</p>
@@ -73,11 +76,11 @@ import BotomAction from '../components/components gegnerales/BotomAction.astro';
                 <p>Instalaciones con excelente limpieza</p>
                 <p>Transporte al aeropuerto disponible por $30 USD (requiere solicitud previa)</p>
             </div>
-        </article>
-    </section>
+        </div>
+    </article>
 
-    <section class="flex sm:flex-row flex-col justify-center items-center w-full bg-[#e5dfcb]">
-        <article class="flex sm:flex-row flex-col justify-center items-center text-center sm:w-1/2 w-full">
+    <article class="flex sm:flex-row flex-col justify-center items-center w-full bg-[#e5dfcb]">
+        <div class="flex sm:flex-row flex-col justify-center items-center text-center sm:w-1/2 w-full">
             <div class="flex justify-center items-center sm:w-1/2 w-full h-full sm:p-10 px-10">
                 <div class="border-6 border-primary w-full h-85 bg-cover bg-center">
                     <div class="Nosotrosdos w-full h-full object-cover bg-center"></div>
@@ -93,11 +96,11 @@ import BotomAction from '../components/components gegnerales/BotomAction.astro';
                     Estamos situados en una zona estratégica, con fácil acceso al transporte público y a corta distancia de varios puntos clave de la ciudad: atracciones, restaurantes, zonas comerciales y más.
                 </p>
             </div>
-        </article>
-    </section>
+        </div>
+    </article>
 
-    <section class="flex justify-center items-center w-full bg-[#cabf96]">
-        <article class="flex sm:flex-row flex-col justify-center items-center text-center sm:w-1/2 w-full">
+    <article class="flex justify-center items-center w-full bg-[#cabf96]">
+        <div class="flex sm:flex-row flex-col justify-center items-center text-center sm:w-1/2 w-full">
             <div class="flex flex-col justify-center items-center sm:w-1/2 w-full h-full p-10">
                 <h1 class="sm:text-title text-xl font-bold text-secondary mb-6 w-4/5">
                     Ideal para cualquier tipo de viajero
@@ -125,17 +128,17 @@ import BotomAction from '../components/components gegnerales/BotomAction.astro';
                     <div class="Nosotrostres w-full h-full object-cover bg-center"></div>
                 </div>
             </div>
-        </article>
-    </section>
+        </div>
+    </article>
 
-    <section class="flex justify-center items-center w-full bg-secondary">
+    <article class="flex justify-center items-center w-full bg-secondary">
         <article class="flex justify-center items-center sm:w-[60%] w-4/5 py-12">
             <h1 class="sm:w-1/2 w-full text-center font-bold text-title text-primary">
                 ¡En Canal Inn Hostal, te esperamos con los brazos abiertos!
             </h1>
         </article>
-    </section>
-</Layout>
+    </article>
+</section>
 
 <style>
     .Nosotrosuno {
