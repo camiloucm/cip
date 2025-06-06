@@ -1,4 +1,6 @@
 ---
+import Logocompleto from "../assets/libs/icons astro/Logocompleto.astro"
+
 /* interface Props {
     page_open: string;
     page_title: string;
@@ -17,12 +19,11 @@ const page_open = page_title.toLowerCase(); // Convierte a minúsculas
 const url = page_open === 'inicio' ? '/' : `/${page_open}`;
 ---
 
-
-<li class="leading-[164%] relative hover:text-secondary hover:scale-110 transition-all duration-500">
-    <a  href={ url } 
-        class="text-lg">
+    <a href={ url } class="flex items-center">
+        <i class="sm:hidden w-42 text-white">
+            <Logocompleto />
+        </i>
         { page_title }
     </a>
-</li>
 
 

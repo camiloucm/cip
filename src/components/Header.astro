@@ -1,4 +1,5 @@
 ---
+import Logolink from "./Logolink.astro"
 import Logocompleto from "../assets/libs/icons astro/Logocompleto.astro"
 import Preheader from "./Preheader.astro"
 import HeaderDesktop from "./HeaderDesktop.astro"
@@ -14,6 +15,8 @@ import HeaderMobileSocial from "./HeaderMobile/HeaderMobileSocial.astro"
 const { page_title } = Astro.props;
 
 const page_open = page_title.toLowerCase() */
+
+const url = 'https://www.canalinnpanama.com/';
 ---
 
 <header id="header" class="sticky top-0 transition-[top] duration-300 z-40">
@@ -28,7 +31,7 @@ const page_open = page_title.toLowerCase() */
                     <div class="flex sm:w-full items-center w-full ">
      
                             <div class="">
-                                <a href="index.html" class="flex items-center">
+                                <a href={ url } class="flex items-center">
                                     <i class="sm:hidden w-42 text-white">
                                         <Logocompleto />
                                     </i>
@@ -48,8 +51,8 @@ const page_open = page_title.toLowerCase() */
                                 <div class="fixed left-0 top-0 w-full h-full bg-black/80 invisible transition-all offcanva-overlay"></div>
                                 <nav class="bg-white border-l-2 border-l-primary w-full max-w-md min-h-screen h-full overflow-y-auto p-7 shadow-md fixed -right-full top-0 z-50 transition-all duration-500 offcanva">
                                     <div class="flex justify-between items-center">
-                                        <a href="" class="flex items-center gap-1">
-                                            <i class="sm:hidden w-42 text-primary">
+                                        <a href={ url } class="flex items-center">
+                                            <i class="sm:hidden w-42 text-white">
                                                 <Logocompleto />
                                             </i>
                                         </a>
@@ -60,7 +63,7 @@ const page_open = page_title.toLowerCase() */
                                     </div>
 
                                     <ul class=" mt-6">
-                                        <HeaderMobileOptions page_open="https://canalinnpanama.com" page_title="Inicio" />
+                                        <HeaderMobileOptions page_title="Inicio" />
                                         <HeaderMobileOptions page_title="Nosotros" />
                                         <HeaderMobileOptions page_title="Habitaciones" />
                                         <HeaderMobileOptions page_title="Blog" />

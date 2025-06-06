@@ -7,7 +7,7 @@ import Contactanos from './contactanos.astro';
 import Faq from './faq.astro';
 
 export async function getStaticPaths() {
-  return [
+  return [   
     { params: { page: 'nosotros' } },
     { params: { page: 'habitaciones' } },
     { params: { page: 'blog' } },
@@ -22,6 +22,10 @@ interface Props {
 
 const { page } = Astro.params as Props;
 
+ if (page === 'inicio' || page === 'index') {
+    return Astro.redirect('/', 302);
+}
+  
 ---
 
 <Layout title={page}>
@@ -32,9 +36,32 @@ const { page } = Astro.params as Props;
   {page === 'faq' && <Faq />}
   {/* Manejo de error: Si la página no existe */}
   { !['nosotros', 'habitaciones', 'blog', 'contactanos', 'faq'].includes(page) &&
-    <div>
-      <h1>Página no encontrada</h1>
-      <p>Lo sentimos, la página "{page}" no existe.</p>
-    </div>
+    <section class="flex w-full items-center justify-center mt-16">
+        <article class="flex flex-col items-center justify-center w-4/5 text-center">
+            <i class="fa-solid fa-exclamation-circle text-primary text-6xl"></i>
+            
+            <h1 class="text-3xl text-primary mt-8">
+                404 - ¡Página No Encontrada!
+            </h1>
+
+            <p class="text-secondary text-2xl mt-4">
+                Lo sentimos, la página que estás buscando no existe.
+            </p>
+
+            <div class="text-secondary text-2xl flex items-center justify-center">
+                <p class="flex">
+                    Puedes volver a la
+                </p> 
+
+                <a href="/" class="flex gap-3">
+                    página de 
+                    <div class="flex items-center justify-center gap-2 text-primary hover:text-secondary transition-colors duration-300">
+                        <i class="fa-solid fa-house"></i>
+                        <span>inicio</span>
+                    </div>
+                </a>
+            </div>
+        </article>
+    </section>
   }
 </Layout>
