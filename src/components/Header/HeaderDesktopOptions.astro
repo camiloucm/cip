@@ -1,10 +1,18 @@
 ---
-interface Props {
+/* interface Props {
     page_open: string;
     page_title: string;
 }
 
-const { page_open, page_title } = Astro.props;
+const { page_open, page_title } = Astro.props; */
+
+interface Props {
+  page_title: string;
+}
+
+const { page_title } = Astro.props;
+console.log("page_title:", page_title); // Para debug
+const page_open = page_title.toLowerCase(); // Convierte a minúsculas
 ---
 
 
