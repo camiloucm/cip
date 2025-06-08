@@ -17,9 +17,6 @@ const SPAN_COST = document.getElementById ('spanCost');
 const SPAN_TAX = document.getElementById ('spanTax');
 const SPAN_TOTAL = document.getElementById ('spanTotal');
 
-
-
-
 CONSULT.addEventListener ('click', function () {
     BACKGROUND.classList.remove ('invisible');
 
@@ -42,6 +39,20 @@ NEXT_PAGE.addEventListener('click', function() {
   PAGINATION.classList.replace('circle-inactive', 'circle-active');
   SEP_PAGINATION.classList.replace('border-primary', 'border-secondary');
 
+  let checkinValue = CHECKIN.value;
+  let checkoutValue = CHECKOUT.value;
+
+  // Convertir las fechas a objetos Date
+  const checkinDate = new Date(checkinValue);
+  const checkoutDate = new Date(checkoutValue);
+
+  // Calcular la diferencia en milisegundos
+  const timeDiff = checkoutDate.getTime() - checkinDate.getTime();
+
+  // Calcular la diferencia en días
+  const DAYS_ROOM = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+
   let paxValue = parseFloat(PAX.value);
   let onePax = 46;
   let paxExtra = paxValue - 1;
@@ -50,9 +61,9 @@ NEXT_PAGE.addEventListener('click', function() {
 
   function value_to_pay() {
     if (paxValue === 1) {
-      valueToPay = onePax;
+      valueToPay = onePax * DAYS_ROOM;
     } else if (paxValue >= 2) {
-      valueToPay = onePax + sobrePax;
+      valueToPay = (onePax + sobrePax) * DAYS_ROOM;
     } else {
       valueToPay = 0;
     }
