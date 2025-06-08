@@ -19,8 +19,8 @@ const { title, punctuation, description, imageUrl, imageClass } = Astro.props as
         <div class="flex flex-col items-center justify-center sm:mt-10 mt-3 text-white sm:w-1/2 w-4/5">
             <h1 class="text-center text-secondtitle">{ title }</h1>
             <h2 class="text-center sm:text-secondtitle text-mparrafo">{ punctuation }</h2>
-            <p class="text-center italic sm:text-secondtitle text-mparrafo">{ description }</p>
-            <div class="sm:invisible visible h-[40px] w-full"></div>
+            <p class="text-center italic sm:text-secondtitle text-mparrafo sm:pb-0 pb-8">{ description }</p>
+            <div class="sm:invisible visible h-[40px] w-full bg-red-500"></div>
         </div>
 
     </div>
