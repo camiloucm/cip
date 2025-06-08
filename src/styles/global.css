@@ -27,6 +27,8 @@
     --text-mtitle: 20px;
     --text-mparrafo: 17px;
     --text-msecondtitle: calc(var(--text-secondtitle)*0.1);
+
+    --text-iconpreheader: 40px;
 }
 
 
