@@ -44,22 +44,29 @@ const monthAbbreviation = months[postDate.getMonth()];
             </a>
         </div>
 
-        <div class="font-bold text-title text-center text-secondary hover:text-primary transition-all duration-500 cursor-pointer">
+        <div class="font-bold sm:text-title text-mtitle text-center text-secondary hover:text-primary transition-all duration-500 cursor-pointer">
             <a href={`/post/${slug}`}>
                 <h1>{ title }</h1>
             </a>
         </div>
 
-        <div class="sm:text-xl text-2xs text-justify" set:html={ excerpt }></div>
+        <!-- <div class="sm:text-xl text-2xs text-justify" set:html={ excerpt }></div> -->
+        <div class="excerp text-justify" style="font-size: clamp(0.8rem, 2vw, 1.2rem);" set:html={ excerpt }></div>
 
-        <div class="flex justify-between w-full">
-            <a href={`/post/${slug}`} class="font-bold text-secondary text-1xs uppercase hover:text-primary hover:ml-1 transition-all duration-500">
+        <div class="flex justify-between w-full h-auto">
+            <a href={`/post/${slug}`} class="font-bold text-secondary text-mparrafo uppercase hover:text-primary hover:ml-1 transition-all duration-500">
                 Leer más...
             </a>
 
             <a href={ slug }>
-                <i class="hover:text-primary hover:mr-1 transition-all duration-500 text-xl font-bold fa-solid fa-plus"></i>
+                <i class="hover:text-primary hover:mr-1 transition-all duration-500 text-parrafo font-bold fa-solid fa-plus"></i>
             </a>
         </div>
     </article>
 </section>
+
+<style>
+    .excerp {
+        line-height: 1.1;
+    }
+</style>

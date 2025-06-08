@@ -5,12 +5,14 @@
         </h1>
 
         <div class="flex items-center justify-center sm:w-4/5 w-full">
-            <div class="flex sm:flex-row flex-col w-full sm:h-30 h-full sm:mt-16 mt-8 bg-primary items-center justify-center sm:gap-30">
-                <form class="flex sm:flex-row flex-col items-center justify-center sm:gap-30 gap-5 my-12 sm:my-0">
+            <div class="flex md:flex-row flex-col sm:w-auto w-full sm:h-30 h-full sm:mt-16 mt-8 bg-primary items-center justify-center sm:gap-20 mx-10px">
+                <form class="flex sm:flex-row flex-col items-center justify-center sm:gap-20 gap-5 my-12 sm:my-0 sm:ml-10">
                     <div class="flex flex-col items-center justify-center gap-2">
                         <div class="flex justify-center items-center gap-3">
-                            <i class="fa-solid fa-person-walking-arrow-right text-white text-2xs"></i>
-                            <label for="checkin" class="text-white text-2xs">Check In</label>
+                            <i class="fa-solid fa-person-walking-arrow-right text-white text-mparrafo"></i>
+                            <label for="checkin" class="text-white text-mparrafo">
+                                Check In
+                            </label>
                         </div>
 
                         <input id="checkin" type="date" name="check-in" value="" min="today" class="btn-checkinout text-secondary" required>
@@ -18,8 +20,10 @@
                     
                     <div class="flex flex-col items-center justify-center gap-2">
                         <div class="flex justify-center items-center gap-3">
-                            <i class="fa-solid fa-person-walking-arrow-loop-left text-white text-2xs"></i>
-                            <label for="checkout" class="text-white text-2xs">Check Out</label>
+                            <i class="fa-solid fa-person-walking-arrow-loop-left text-white text-mparrafo"></i>
+                            <label for="checkout" class="text-white text-mparrafo">
+                                Check Out
+                            </label>
                         </div>
 
                         <input id="checkout" type="date" name="check-out" value="" min="today" class="btn-checkinout text-secondary" required>
@@ -27,19 +31,21 @@
 
                     <div class="flex flex-col items-center justify-center gap-2">
                         <div class="flex justify-center items-center gap-3">
-                            <i class="fa-solid fa-bed text-white text-2xs"></i>
-                            <label for="pax" class="text-white text-2xsp">
+                            <i class="fa-solid fa-bed text-white text-mparrafo"></i>
+                            <label for="pax" class="text-white text-mparrafo">
                                 Huespedes
                             </label>
                         </div>
 
                         <select name="pax" id="pax" class="btn-checkinout text-secondary" required>
-                            <option value="1" hidden>Personas</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>    
-                            <option value="4">4</option>    
-                            <option value="5">5</option>    
+                            <option value="1" hidden>
+                                Personas
+                            </option>
+                            <option value="1">1 Persona</option>
+                            <option value="2">2 Personas</option>
+                            <option value="3">3 Personas</option>    
+                            <option value="4">4 Personas</option>    
+                            <option value="5">5 Personas</option>    
                         </select>
                     </div>
                     
@@ -47,7 +53,7 @@
                 </form> 
 
             
-                    <button id="consult" onclick="dialog.showModal()" class="sm:mb-0 mb-14">
+                    <button id="consult" onclick="dialog.showModal()" class="sm:mb-0 mb-14 sm:mr-10">
                         Consultar
                     </button>
                
@@ -81,36 +87,36 @@
                         <div class="flex flex-col items-center gap-7 mt-7">
                             <div class="flex flex-col justify-center items-center gap-3">
                                 <div class="flex justify-center items-center gap-3">
-                                    <i class="fa-solid fa-person-walking-arrow-right text-secondary text-2xs"></i>
-                                    <p class="text-secondary font-bold text-2xs">
+                                    <i class="fa-solid fa-person-walking-arrow-right text-secondary text-parrafo"></i>
+                                    <p class="text-secondary font-bold text-parrafo">
                                         Fecha de ingreso: 
                                     </p>
                                 </div>
-                                <span id="spanCheckIn" class="text-secondary text-2xl">121212</span>
+                                <span id="spanCheckIn" class="text-secondary text-secondtitle"></span>
                             </div>
 
                             <div class="flex flex-col justify-center items-center gap-3">
                                 <div class="flex justify-center items-center gap-3">
-                                    <i class="fa-solid fa-person-walking-arrow-loop-left text-secondary text-2xs"></i>
-                                    <p class="text-secondary font-bold text-2xs">
+                                    <i class="fa-solid fa-person-walking-arrow-loop-left text-secondary text-parrafo"></i>
+                                    <p class="text-secondary font-bold text-parrafo">
                                         Fecha de salida: 
                                     </p>
                                 </div>
-                                <span id="spanChekOut" class="text-secondary text-2xl">131313</span>
+                                <span id="spanChekOut" class="text-secondary text-secondtitle"></span>
                             </div>
 
                             <div class="flex flex-col justify-center items-center gap-3">
                                 <div class="flex justify-center items-center gap-3">
-                                    <i class="fa-solid fa-bed text-secondary text-2xs"></i>
-                                    <p class="text-secondary font-bold text-2xs">
+                                    <i class="fa-solid fa-bed text-secondary text-parrafo"></i>
+                                    <p class="text-secondary font-bold text-parrafo">
                                         Cantidad de huspedes: 
                                     </p>
                                 </div>
                                 
                                 <div class="flex items-center gap-2">
-                                    <span id="spanPax" class="text-secondary text-2xl"></span>
+                                    <span id="spanPax" class="text-secondary text-secondtitle"></span>
                                 
-                                    <p class="text-secondary text-2xl">
+                                    <p class="text-secondary text-secondtitle">
                                         Personas
                                     </p>
                                 </div>
@@ -131,43 +137,43 @@
                         <div class="flex flex-col items-center gap-7 mt-7">
                             <div class="flex flex-col justify-center items-center gap-3">
                                 <div class="flex justify-center items-center gap-3">
-                                    <i class="fa-solid fa-bed text-secondary text-2xs"></i>
-                                    <p class="text-secondary font-bold text-2xs">
+                                    <i class="fa-solid fa-bed text-secondary text-parrafo"></i>
+                                    <p class="text-secondary font-bold text-parrafo">
                                         Valor por hospedaje total: 
                                     </p>
                                 </div>
 
-                                <p class="text-secondary text-2xl">
+                                <p class="text-secondary text-secondtitle">
                                     $
-                                    <span id="spanCost" class="text-secondary text-2xl"></span>
+                                    <span id="spanCost" class="text-secondary text-secondtitle"></span>
                                 </p>
                             </div>
 
                             <div class="flex flex-col justify-center items-center gap-3">
                                 <div class="flex justify-center items-center gap-3">
-                                    <i class="fa-solid fa-calculator text-secondary text-2xs"></i>
-                                    <p class="text-secondary font-bold text-2xs">
+                                    <i class="fa-solid fa-calculator text-secondary text-parrafo"></i>
+                                    <p class="text-secondary font-bold text-parrafo">
                                         Valor por impuestos: 
                                     </p>
                                 </div>
                                 
                                 <p
-                                    class="text-secondary text-2xl">
+                                    class="text-secondary text-secondtitle">
                                     $
-                                    <span id="spanTax" class="text-secondary text-2xl"></span>
+                                    <span id="spanTax" class="text-secondary text-secondtitle"></span>
                                 </p>
                             </div>
 
                             <div class="flex flex-col justify-center items-center gap-3">
                                 <div class="flex justify-center items-center gap-3">
-                                    <i class="fa-solid fa-circle-dollar-to-slot text-secondary text-2xs"></i>
-                                    <p class="text-secondary font-bold text-2xs">
+                                    <i class="fa-solid fa-circle-dollar-to-slot text-secondary text-parrafo"></i>
+                                    <p class="text-secondary font-bold text-parrafo">
                                         Valor total a pagar: 
                                     </p>
                                 </div>
-                                <p class="text-secondary text-2xl">
+                                <p class="text-secondary text-secondtitle">
                                     $ 
-                                    <span id="spanTotal" class="text-secondary text-2xl"></span>
+                                    <span id="spanTotal" class="text-secondary text-secondtitle"></span>
                                 </p>
                             </div>
                             

@@ -21,7 +21,12 @@
     --color-cream-foreground: #fff;
     --color-warm: #fff0e5;
 
-    --text-title: 28px
+    --text-title: 28px;
+    --text-parrafo: 24px;
+    --text-secondtitle: 24px;
+    --text-mtitle: 20px;
+    --text-mparrafo: 17px;
+    --text-msecondtitle: calc(var(--text-secondtitle)*0.1);
 }
 
 

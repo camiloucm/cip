@@ -10,14 +10,14 @@ const { question, answer }: Props = Astro.props;
 <div class="container flex justify-center items-center w-full h-auto">
     <div class="faqs sm:w-1/2 w-full h-auto border-b-2 border-primary">
         <div class="faq flex flex-col gap-7">
-            <div class="head flex gap-7 items-center">
+            <div class="head flex justify-between gap-7 items-center">
                 <span class="question text-primary text-title hover:text-secondary transition-all duration-500 cursor-pointer">
                     {question}
                 </span>
-                <i class="i fa-solid fa-arrow-down text-primary text-2xl hover:text-secondary transition-all duration-500 cursor-pointer"></i>
+                <i class="i fa-solid fa-arrow-down text-primary text-parrafo hover:text-secondary transition-all duration-500 cursor-pointer"></i>
             </div>
             <div class="content text-secondary overflow-hidden transition-all duration-500">
-                <p class="answer inactive text-xl mb-7">
+                <p class="answer inactive sm:text-parrafo text-parrafo mb-7">
                     {answer}
                 </p>
             </div>

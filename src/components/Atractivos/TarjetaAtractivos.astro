@@ -17,8 +17,10 @@ const { title, description, imageUrl, imgClass } = Astro.props as Props;
     </article>
 
     <article class="sm:w-1/2 w-full text-secondary">
-        <h3 class="uppercase font-bold  my-3 text-center sm:text-title text-[17px]">{ title }</h3>
-        <p class="text-center sm:text-xl text-2xs">
+        <h3 class="uppercase font-bold  my-3 text-center sm:text-title text-mtitle">
+            { title }
+        </h3>
+        <p class="text-center sm:text-parrafo text-mparrafo">
             { description }
         </p>
     </article>
