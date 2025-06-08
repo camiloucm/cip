@@ -29,15 +29,15 @@ const { imageUrl } = Astro.props;
 
             <div class="flex flex-col gap-5 sm:w-1/2 w-full items-center">
                 <div class="border-6 border-primary w-80 h-48 bg-cover bg-center">
-                    <div class="HabitacionesC1 w-full h-full object-cover bg-center"></div>
+                    <div class="amenidadUno w-full h-full object-cover bg-center"></div>
                 </div>
 
                 <div class="border-6 border-primary w-80 h-48 bg-cover bg-center">
-                    <div class="HabitacionesC1 w-full h-full object-cover bg-center"></div>
+                    <div class="amenidadDos w-full h-full object-cover bg-center"></div>
                 </div>
 
                 <div class="border-6 border-primary w-80 h-48 bg-cover bg-center">
-                    <div class="HabitacionesC1 w-full h-full object-cover bg-center"></div>
+                    <div class="amenidadTres w-full h-full object-cover bg-center"></div>
                 </div>
             </div>
         </div>
@@ -51,8 +51,20 @@ const { imageUrl } = Astro.props;
         background-position: center;
     }
 
-    .HabitacionesC1 {
-        background-image: url('../assets/libs/imgs/1000343286-2.png');
+    .amenidadUno {
+        background-image: url('../assets/libs/imgs/thumbnail_foto_canalinn_comedor.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .amenidadDos {
+        background-image: url('../assets/libs/imgs/thumbnail_foto_canalinn_bar.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .amenidadTres {
+        background-image: url('../assets/libs/imgs/thumbnail_foto_canalinn_piscina.jpg');
         background-size: cover;
         background-position: center;
     }
