@@ -1,39 +1,59 @@
-const CONSULT = document.getElementById ('consult');
-const BACKGROUND = document.getElementById ('blackgroundDialog');
-const BACKPAGE = document.getElementById ('closePageOne');
-const CHECKIN = document.getElementById ('checkin');
-const CHECKOUT = document.getElementById ('checkout');
-const PAX = document.getElementById ('pax');
-const SPAN_CHECKIN = document.getElementById ('spanCheckIn');
-const SPAN_CHECKOUT = document.getElementById ('spanChekOut');
-const SPAN_PAX = document.getElementById ('spanPax');
-const PAGE_ONE =document.querySelector ('.dialog-active');
-const PAGE_TWO =document.querySelector ('.dialog-inactive');
-const NEXT_PAGE = document.querySelector ('.nextPage');
-const SEND_RESERVATION = document.querySelector ('.sentReservation');
-const PAGINATION = document.getElementById ('circle-inactive');
-const SEP_PAGINATION = document.getElementById ('separatorPagination');
-const SPAN_COST = document.getElementById ('spanCost');
-const SPAN_TAX = document.getElementById ('spanTax');
-const SPAN_TOTAL = document.getElementById ('spanTotal');
+const CONSULT = document.getElementById('consult');
+const BACKGROUND = document.getElementById('blackgroundDialog');
+const BACKPAGE = document.getElementById('closePageOne');
+const CHECKIN = document.getElementById('checkin');
+const CHECKOUT = document.getElementById('checkout');
+const PAX = document.getElementById('pax');
+const SPAN_CHECKIN = document.getElementById('spanCheckIn');
+const SPAN_CHECKOUT = document.getElementById('spanChekOut');
+const SPAN_PAX = document.getElementById('spanPax');
+const PAGE_ONE = document.querySelector('.dialog-active');
+const PAGE_TWO = document.querySelector('.dialog-inactive');
+const NEXT_PAGE = document.querySelector('.nextPage');
+const SEND_RESERVATION = document.querySelector('.sentReservation');
+const PAGINATION = document.getElementById('circle-inactive');
+const SEP_PAGINATION = document.getElementById('separatorPagination');
+const SPAN_COST = document.getElementById('spanCost');
+const SPAN_TAX = document.getElementById('spanTax');
+const SPAN_TOTAL = document.getElementById('spanTotal');
 
-CONSULT.addEventListener ('click', function () {
-    BACKGROUND.classList.remove ('invisible');
+CONSULT.addEventListener('click', function () {
+  BACKGROUND.classList.remove('invisible');
 
-    let checkinValue = CHECKIN.value;
-    let checkoutValue = CHECKOUT.value;
-    let paxValue = parseFloat(PAX.value);
+  let checkinValue = CHECKIN.value;
+  let checkoutValue = CHECKOUT.value;
+  let paxValue = parseFloat(PAX.value);
 
-    SPAN_CHECKIN.innerHTML = checkinValue;
-    SPAN_CHECKOUT.innerHTML = checkoutValue;
-    SPAN_PAX.innerHTML = paxValue;
+  SPAN_CHECKIN.innerHTML = checkinValue;
+  SPAN_CHECKOUT.innerHTML = checkoutValue;
+  SPAN_PAX.innerHTML = paxValue;
 });
 
-BACKPAGE.addEventListener ('click', function () {
-    BACKGROUND.classList.add ('invisible');
+BACKPAGE.addEventListener('click', function () {
+  BACKGROUND.classList.add('invisible');
 });
 
-NEXT_PAGE.addEventListener('click', function() {
+// Evento para actualizar el checkout cuando cambia el checkin
+CHECKIN.addEventListener('change', function () {
+  const checkinDate = new Date(CHECKIN.value);
+  const nextDay = new Date(checkinDate);
+
+  //Establecer la fecha de salida un dia después del checkin
+  nextDay.setDate(checkinDate.getDate() + 2);
+
+  // Formatear la fecha para el input type="date" (YYYY-MM-DD)
+  const year = nextDay.getFullYear();
+  const month = String(nextDay.getMonth() + 1).padStart(2, '0');
+  const day = String(nextDay.getDate()).padStart(2, '0');
+  const nextDayFormatted = `${year}-${month}-${day}`;
+
+  //Establecer el valor mínimo del checkout
+  CHECKOUT.min = nextDayFormatted;
+  //Actualizar el valor del checkout
+  CHECKOUT.value = nextDayFormatted;
+});
+
+NEXT_PAGE.addEventListener('click', function () {
   PAGE_ONE.classList.replace('dialog-active', 'dialog-inactive');
   PAGE_TWO.classList.replace('dialog-inactive', 'dialog-active');
   PAGINATION.classList.replace('circle-inactive', 'circle-active');
@@ -51,7 +71,6 @@ NEXT_PAGE.addEventListener('click', function() {
 
   // Calcular la diferencia en días
   const DAYS_ROOM = Math.ceil(timeDiff / (1000 * 3600 * 24));
-
 
   let paxValue = parseFloat(PAX.value);
   let onePax = 46;
@@ -79,6 +98,6 @@ NEXT_PAGE.addEventListener('click', function() {
   SPAN_TOTAL.innerText = (valueToPay + valueTax).toFixed(2);
 });
 
-SEND_RESERVATION.addEventListener ('click', function () {
-    BACKGROUND.classList.add ('invisible');
+SEND_RESERVATION.addEventListener('click', function () {
+  BACKGROUND.classList.add('invisible');
 });
