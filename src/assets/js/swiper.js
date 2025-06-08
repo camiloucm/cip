@@ -8,7 +8,7 @@ const swiper = new Swiper('.swiper-hero', {
   //effect: 'fade',
 
   autoplay: {
-    delay: 500,
+    delay: 2000,
     pauseOnMouseEnter: true,
     disableOnInteraction: false,
   },
