@@ -21,15 +21,24 @@
     --color-cream-foreground: #fff;
     --color-warm: #fff0e5;
 
-    --text-title: 28px;
+    --text-title: 24px;
+    --text-parrafo: 18px;
+    --text-secondtitle: 21px;
+    --text-mtitle: 18px;
+    --text-mparrafo: 14px;
+    --text-msecondtitle: 16;
+
+    --text-iconpreheader: 40px;
+}
+
+/* --text-title: 28px;
     --text-parrafo: 24px;
     --text-secondtitle: 24px;
     --text-mtitle: 20px;
     --text-mparrafo: 17px;
     --text-msecondtitle: calc(var(--text-secondtitle)*0.1);
 
-    --text-iconpreheader: 40px;
-}
+    --text-iconpreheader: 40px; */
 
 
 
