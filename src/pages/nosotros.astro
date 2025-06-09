@@ -72,24 +72,32 @@ import BotomAction from '../components/components gegnerales/BotomAction.astro';
         </article>
     </section>
 
-    <section class="flex items-center justify-center bg-secondary">
-        <article class="text-white text-center py-15 sm:w-full w-4/5">
-            <h1 class="sm:text-title text-mtitle sm:mb-15 mb-7">
-                Comodidades que marcan la diferencia
-            </h1>
+    <div class="flex justify-center w-screen bg-secondary">
+        <section class="flex items-center justify-center bg-secondary">
+            <article class="flex flex-col items-center text-white text-center py-15 sm:w-full w-4/5">
+                <h1 class="sm:text-title text-mtitle sm:mb-15 mb-7">
+                    Comodidades que marcan la diferencia
+                </h1>
 
-            <div class="flex flex-col gap-3 sm:text-parrafo text-mparrafo">
-                <p>Piscina al aire libre para refrescarte en cualquier momento</p>
-                <p>Jardín y terraza donde puedes relajarte o leer un buen libro</p>
-                <p>Sala común para compartir o descansar</p>
-                <p>Estacionamiento privado sin costo adicional</p>
-                <p>Pet friendly and gay friendly </p>
-                <p>Libre de humo (prohibido fumar)</p>
-                <p>Instalaciones con excelente limpieza</p>
-                <p>Transporte al aeropuerto disponible por $30 USD (requiere solicitud previa)</p>
-            </div>
-        </article>
-    </section>
+                <div class="flex sm:flex-row flex-col justify-center gap-16 sm:text-parrafo text-mparrafo w-4/5">
+                    <div class="text-start flex flex-col">
+                        <p>• Piscina al aire libre para refrescarte en cualquier momento</p>
+                        <p>• Jardín y terraza donde puedes relajarte o leer un buen libro</p>
+                        <p>• Sala común para compartir o descansar</p>
+                        <p>• Estacionamiento privado sin costo adicional</p>
+                        <p>• Pet friendly and gay friendly </p>
+                        <p>• Libre de humo (prohibido fumar)</p>
+                        <p>• Instalaciones con excelente limpieza</p>
+                        <p>• Transporte al aeropuerto disponible por $30 USD (requiere solicitud previa)</p>
+                    </div>
+                    
+                    <div class="sm:w-[600px] w-full sm:h-auto h-auto sm:border-8 border-5 border-primary">
+                        <div class="bgimage-amenidades w-full h-full bg-cover bg-center"></div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
 
     <section class="flex sm:flex-row flex-col justify-center items-center w-full bg-[#e5dfcb]">
         <article class="flex sm:flex-row flex-col justify-center items-center text-center sm:w-1/2 w-full">
@@ -99,7 +107,7 @@ import BotomAction from '../components/components gegnerales/BotomAction.astro';
                 </div>
             </div>
 
-            <div class="flex flex-col justify-center items-center sm:w-1/2 w-full h-full p-10">
+            <div class="flex flex-col justify-center items-center sm:w-1/2 w-full h-full p-10 sm:mt-0 mt-8">
                 <h1 class="sm:text-title text-mtitle font-bold text-secondary mb-4 sm:w-4/5 w-full">
                     Ubicación conveniente para moverte con facilidad
                 </h1>
@@ -171,5 +179,16 @@ import BotomAction from '../components/components gegnerales/BotomAction.astro';
         background-position: center;
     }
 
+    .background-our {
+        background-image: url('../assets/libs/imgs/1000343281-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bgimage-amenidades {
+        background-image: url('../assets//libs//imgs/1000343287-2.png');
+        background-size: cover;
+        background-position: center;
+    }
 
 </style>
