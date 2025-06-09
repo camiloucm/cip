@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Nosotros from './nosotros.astro';
 import Habitaciones from './habitaciones.astro';
 import Blog from './blog.astro';
-import Contactanos from './contactanos.astro';
+import Contáctanos from './contáctanos.astro';
 import Faq from './faq.astro';
 
 export async function getStaticPaths() {
@@ -11,7 +11,7 @@ export async function getStaticPaths() {
     { params: { page: 'nosotros' } },
     { params: { page: 'habitaciones' } },
     { params: { page: 'blog' } },
-    { params: { page: 'contactanos' } },
+    { params: { page: 'contáctanos' } },
     { params: { page: 'faq' } },
   ];
 }
@@ -32,10 +32,10 @@ const { page } = Astro.params as Props;
   {page === 'nosotros' && <Nosotros />}
   {page === 'habitaciones' && <Habitaciones />}
   {page === 'blog' && <Blog />}
-  {page === 'contactanos' && <Contactanos />}
+  {page === 'contáctanos' && <Contáctanos />}
   {page === 'faq' && <Faq />}
   {/* Manejo de error: Si la página no existe */}
-  { !['nosotros', 'habitaciones', 'blog', 'contactanos', 'faq'].includes(page) &&
+  { !['nosotros', 'habitaciones', 'blog', 'contáctanos', 'faq'].includes(page) &&
     <section class="flex w-full items-center justify-center mt-16">
         <article class="flex flex-col items-center justify-center w-4/5 text-center">
             <i class="fa-solid fa-exclamation-circle text-primary text-6xl"></i>
