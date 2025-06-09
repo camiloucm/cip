@@ -81,14 +81,14 @@ window.onscroll = function () {
 // --------- sticky header on scroll end
 
 // --------- search filed toggle start
-const searchBtn = document.querySelector(".search-btn")
+/* const searchBtn = document.querySelector(".search-btn")
 const searchForm = document.querySelector(".search-form")
-const searchClose = document.querySelector(".search-close")
+const searchClose = document.querySelector(".search-close") */
 
-searchBtn.addEventListener("click", () => {
+/* searchBtn.addEventListener("click", () => {
     searchForm.classList.remove("opacity-0", "invisible")
     searchForm.classList.add("opacity-100", "visible", 'z-20')
-})
+}) */
 searchClose.addEventListener("click", () => {
     searchForm.classList.remove("opacity-100", "visible", 'z-20')
     searchForm.classList.add("opacity-0", "invisible")
