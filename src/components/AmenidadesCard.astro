@@ -9,25 +9,28 @@ const { imageUrl } = Astro.props;
 <section class="flex ms:flex-row flex-col justify-center items-center w-screen habitacionAmenidades">   
 
     <article class="flex sm:flex-row flex-col justify-center items-center w-full h-full bg-secondary/80">
-        <div class="flex sm:flex-row flex-col justify-center items-center m-auto gap-12 sm:w-1/2 w-4/5 h-full py-5">
+        <div class="flex sm:flex-row flex-col justify-center items-center mx-auto my-12 gap-12 sm:w-1/2 w-4/5 h-full py-5">
             <div class="text-white text-center sm:w-1/2 w-full">
                 
 
 
-                <h1 class="sm:text-title text-mtitle font-bold mb-8 sm:w-[60%] w-full m-auto">Comodidades que marcan la diferencia</h1>
-                    <div class="flex flex-col gap-7 sm:text-mparrafo text-mparrafo sm:w-1/2 w-full m-auto">
-                        <p>Piscina al aire libre para refrescarte en cualquier momento</p>
-                        <p>Jardín y terraza donde puedes relajarte o leer un buen libro</p>
-                        <p>Sala común para compartir o descansar</p>
-                        <p>Estacionamiento privado sin costo adicional</p>
-                        <p>Pet friendly and gay friendly </p>
-                        <p>Libre de humo (prohibido fumar)</p>
-                        <p>Instalaciones con excelente limpieza</p>
-                        <p>Transporte al aeropuerto disponible por $30 USD (requiere solicitud previa)</p>
-                    </div>
+                <h1 class="sm:text-title text-mtitle font-bold mb-8 sm:w-[60%] w-full m-auto">
+                    Comodidades que marcan la diferencia
+                </h1>
+
+                <ul class="flex flex-col sm:text-parrafo text-mparrafo sm:w-1/2 w-full m-auto text-start">
+                    <li>Piscina al aire libre para refrescarte en cualquier momento</li>
+                    <li>Jardín y terraza donde puedes relajarte o leer un buen libro</li>
+                    <li>Sala común para compartir o descansar</li>
+                    <li>Estacionamiento privado sin costo adicional</li>
+                    <li>Pet friendly and gay friendly </li>
+                    <li>Libre de humo (prohibido fumar)</li>
+                    <li>Instalaciones con excelente limpieza</li>
+                    <li>Transporte al aeropuerto disponible por $30 USD (requiere solicitud previa)</li>
+                </ul>
             </div>
 
-            <div class="flex flex-col gap-5 sm:w-1/2 w-full items-center">
+            <div class="flex flex-col gap-12 sm:w-1/2 w-full items-center">
                 <div class="border-6 border-primary w-80 h-48 bg-cover bg-center">
                     <div class="amenidadUno w-full h-full object-cover bg-center"></div>
                 </div>
@@ -36,9 +39,9 @@ const { imageUrl } = Astro.props;
                     <div class="amenidadDos w-full h-full object-cover bg-center"></div>
                 </div>
 
-                <div class="border-6 border-primary w-80 h-48 bg-cover bg-center">
+                <!-- <div class="border-6 border-primary w-80 h-48 bg-cover bg-center">
                     <div class="amenidadTres w-full h-full object-cover bg-center"></div>
-                </div>
+                </div> -->
             </div>
         </div>
     </article> 
@@ -67,5 +70,22 @@ const { imageUrl } = Astro.props;
         background-image: url('../assets/libs/imgs/thumbnail_foto_canalinn_piscina.jpg');
         background-size: cover;
         background-position: center;
+    }
+
+    ul {
+        list-style-type: none; /* Elimina los estilos de lista predeterminados */
+        padding-left: 0; /* Elimina el padding predeterminado del ul */
+    }
+
+    li {
+        margin-bottom: 5px; /* Agrega espacio entre los elementos de la lista */
+    }
+
+    li:before {
+        content: "\25CF";  /* Unicode para un círculo relleno */
+        color: var(--color-white);     /* Color del círculo (puedes cambiarlo) */
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
     }
 </style>

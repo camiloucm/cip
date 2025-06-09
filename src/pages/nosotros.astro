@@ -80,16 +80,16 @@ import BotomAction from '../components/components gegnerales/BotomAction.astro';
                 </h1>
 
                 <div class="flex sm:flex-row flex-col justify-center gap-16 sm:text-parrafo text-mparrafo w-4/5">
-                    <div class="text-start flex flex-col">
-                        <p>• Piscina al aire libre para refrescarte en cualquier momento</p>
-                        <p>• Jardín y terraza donde puedes relajarte o leer un buen libro</p>
-                        <p>• Sala común para compartir o descansar</p>
-                        <p>• Estacionamiento privado sin costo adicional</p>
-                        <p>• Pet friendly and gay friendly </p>
-                        <p>• Libre de humo (prohibido fumar)</p>
-                        <p>• Instalaciones con excelente limpieza</p>
-                        <p>• Transporte al aeropuerto disponible por $30 USD (requiere solicitud previa)</p>
-                    </div>
+                    <ul class="text-start flex flex-col">
+                        <li>Piscina al aire libre para refrescarte en cualquier momento</li>
+                        <li>Jardín y terraza donde puedes relajarte o leer un buen libro</li>
+                        <li>Sala común para compartir o descansar</li>
+                        <li>Estacionamiento privado sin costo adicional</li>
+                        <li>Pet friendly and gay friendly </li>
+                        <li>Libre de humo (prohibido fumar)</li>
+                        <li>Instalaciones con excelente limpieza</li>
+                        <li>Transporte al aeropuerto disponible por $30 USD (requiere solicitud previa)</li>
+                    </ul>
                     
                     <div class="sm:w-[600px] w-full sm:h-auto h-auto sm:border-8 border-5 border-primary">
                         <div class="bgimage-amenidades w-full h-full bg-cover bg-center"></div>
@@ -189,6 +189,23 @@ import BotomAction from '../components/components gegnerales/BotomAction.astro';
         background-image: url('../assets//libs//imgs/1000343287-2.png');
         background-size: cover;
         background-position: center;
+    }
+
+    ul {
+        list-style-type: none; /* Elimina los estilos de lista predeterminados */
+        padding-left: 0; /* Elimina el padding predeterminado del ul */
+    }
+
+    li {
+        margin-bottom: 5px; /* Agrega espacio entre los elementos de la lista */
+    }
+
+    li:before {
+        content: "\25CF";  /* Unicode para un círculo relleno */
+        color: var(--color-white);     /* Color del círculo (puedes cambiarlo) */
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
     }
 
 </style>
