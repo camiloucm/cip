@@ -9,16 +9,17 @@
     Array.from({ length: 20}).map((_,i) =>(
       <a
         class="rounded-md overflow-hidden hover:scale-105 transition-all duration-500 aspect-square"
-        href= {`/src/assets/libs/imgs/IMG_${i + 1}.webp`}
+        href= {`/dist/_astro/IMG_${i + 1}.webp`}
         target="_blank"
         data-cropped="true"
         data-pswp-width="1875"
         data-pswp-height="2500"
       >
+        {/* /src/assets/libs/imgs/ */}
         <img
           class="aspect-square object-cover"
           loading="lazy" 
-          src={`/src/assets/libs/imgs/IMG_${i + 1}.webp`}
+          src={`/dist/_astro/IMG_${i + 1}.webp`}
           alt=""
         >
       </a>
