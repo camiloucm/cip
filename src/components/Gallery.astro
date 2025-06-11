@@ -1,0 +1,70 @@
+---
+    import 'photoswipe/style.css';
+    
+    const GALLERY_IMAGES = []
+---
+
+<div class="pswp-gallery pswp-gallery--single-column grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto" id="gallery">
+  {
+    Array.from({ length: 20}).map((_,i) =>(
+      <a
+        class="rounded-md overflow-hidden hover:scale-105 transition-all duration-500 aspect-square"
+        href= {`/src/assets/libs/imgs/IMG_${i + 1}.webp`}
+        target="_blank"
+        data-cropped="true"
+        data-pswp-width="1875"
+        data-pswp-height="2500"
+      >
+        <img
+          class="aspect-square object-cover"
+          loading="lazy" 
+          src={`/src/assets/libs/imgs/IMG_${i + 1}.webp`}
+          alt=""
+        >
+      </a>
+    ))
+  }
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+
+  function updateImageDimensions() {
+    const gallery = document.getElementById('gallery');
+    if (!gallery) return;
+
+    const links = gallery.querySelectorAll('a');
+
+    links.forEach(link => {
+      const img = link.querySelector('img');
+      if (!img) return;
+
+      // Check if the image has already loaded
+      if (img.complete) {
+        updateAttributes(link, img);
+      } else {
+        img.onload = () => updateAttributes(link, img);
+      }
+    });
+
+    function updateAttributes(link, img) {
+      const width = img.naturalWidth;
+      const height = img.naturalHeight;
+
+      if (width && height) {
+        link.setAttribute('data-pswp-width', width.toString());
+        link.setAttribute('data-pswp-height', height.toString());
+      }
+    }
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '#gallery',
+      children: 'a',
+      pswpModule: () => import('photoswipe')
+    });
+    lightbox.init();
+  }
+
+  {/* Run after the DOM is ready */}
+  document.addEventListener('DOMContentLoaded', updateImageDimensions);
+
+</script>

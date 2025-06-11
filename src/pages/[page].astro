@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nosotros from './nosotros.astro';
 import Habitaciones from './habitaciones.astro';
+import Galería from './galería.astro';
 import Blog from './blog.astro';
 import Contáctanos from './contáctanos.astro';
 import Faq from './faq.astro';
@@ -10,6 +11,7 @@ export async function getStaticPaths() {
   return [   
     { params: { page: 'nosotros' } },
     { params: { page: 'habitaciones' } },
+    { params: { page: 'galería' } },
     { params: { page: 'blog' } },
     { params: { page: 'contáctanos' } },
     { params: { page: 'faq' } },
@@ -31,6 +33,7 @@ const { page } = Astro.params as Props;
 <Layout title={page}>
   {page === 'nosotros' && <Nosotros />}
   {page === 'habitaciones' && <Habitaciones />}
+  {page === 'galería' && <Galería />}
   {page === 'blog' && <Blog />}
   {page === 'contáctanos' && <Contáctanos />}
   {page === 'faq' && <Faq />}

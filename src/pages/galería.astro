@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroPages from '../components/HeroPages.astro';
+import Gallery from '../components/Gallery.astro';
+---
+
+<Layout title="Galería">
+    <HeroPages title="Galería"/>
+    <section class="w-full h-auto justify-center items-center">
+        <article class="flex justify-center w-4/5 mx-auto">
+            <Gallery />
+        </article>
+    </section>
+
+</Layout>
