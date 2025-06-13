@@ -1,37 +1,32 @@
----
-import { actions } from "astro:actions";
----
 
-<form action={ actions.send } method="POST" class="flex flex-col sm:w-[30%] w-full gap-5">
+<form action="" class="flex flex-col sm:w-[30%] w-full gap-5">
     <div class="flex flex-col gap-2">
         <label for="nombre" class="text-secondary font-bold">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Juan Perez" class="w-full h-12 border border-primary px-5 rounded-xs outline-none" required>
+        <input type="text" name="nombre" id="nombre" placeholder="Juan Perez" class="w-full h-12 border border-primary px-5 rounded-xs outline-none">
     </div>
     
     <div class="flex flex-col gap-2">
         <label for="email" class="text-secondary font-bold">Email</label>
-        <input type="email" name="email" id="email" placeholder="tucorreo@ejemplo.com" class="w-full h-12 border border-primary px-5 rounded-xs outline-none" required>
+        <input type="email" name="email" id="email" placeholder="tucorreo@ejemplo.com" class="w-full h-12 border border-primary px-5 rounded-xs outline-none">
     </div>
 
     <div class="flex flex-col gap-2">
         <label for="telefono" class="text-secondary font-bold">Teléfono</label>
-        <input type="tel" name="telefono" id="telefono" placeholder="(+507) 0000 0000" class="w-full h-12 border border-primary px-5 rounded-xs outline-none" required>
+        <input type="tel" name="telefono" id="telefono" placeholder="(+507) 0000 0000" class="w-full h-12 border border-primary px-5 rounded-xs outline-none">
     </div>
 
     <div class="flex flex-col gap-2">
         <label for="mensaje" class="text-secondary font-bold">Mensaje</label>
-        <textarea name="mensaje" id="mensaje" placeholder="Escríbenos tu mensaje" class="w-full h-32 border border-primary px-5 pt-4 rounded-xs outline-none" required></textarea>
+        <textarea name="mensaje" id="mensaje" placeholder="Escríbenos tu mensaje" class="w-full h-32 border border-primary px-5 pt-4 rounded-xs outline-none"></textarea>
     </div>
 
-    <button type="submit" class="bg-primary text-white sm:flex items-center gap-2.5 btn after:bg-green py-3 px-6 flex justify-center hover:bg-secondary transition-all duration-300 ease-in-out cursor-pointer"> 
+    <button class="bg-primary text-white sm:flex items-center gap-2.5 btn after:bg-green py-3 px-6 flex justify-center hover:bg-secondary transition-all duration-300 ease-in-out cursor-pointer"> 
         Enviar 
         <span class="">
             <i class="fa-solid fa-arrow-right"></i>
         </span>
     </button>
 </form>
-
-<script src="../../actions/index.ts"></script>
 
 <style>
     input, textarea {
@@ -44,8 +39,8 @@ import { actions } from "astro:actions";
     }
 
     input:focus, textarea:focus {
-        border-color: var(--color-secondary);
-        border-width: 2px;
+        border-color: red;
+        border-width: 7px;
     }
 
     button:hover i {
