@@ -5,7 +5,7 @@ import EntradasCard from '../components/EntradasCard.astro';
 
 import { getLatestposts } from '../lib/wp';
 
-const posts = await getLatestposts({ perPage: 10 });
+const posts = await getLatestposts({ perPage: 50 });
 ---
 
 <Layout title="Blog">
