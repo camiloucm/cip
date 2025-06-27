@@ -1,11 +1,8 @@
 const swiper = new Swiper('.swiper-hero', {
 
-
-  // Optional parameters
   direction: 'horizontal',
   loop: true,
   allowTouchMove: true,
-  //effect: 'fade',
 
   autoplay: {
     delay: 2000,
@@ -13,7 +10,6 @@ const swiper = new Swiper('.swiper-hero', {
     disableOnInteraction: false,
   },
 
-  // Pagination
   pagination: {
     el: '.swiper-pagination',
     type: "bullets",
@@ -21,16 +17,10 @@ const swiper = new Swiper('.swiper-hero', {
     dynamicBullets: true,
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
-  // And if we need scrollbar
-  //crollbar: {
-    //el: '.swiper-scrollbar',
-  //},
 });
 
 

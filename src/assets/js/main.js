@@ -1,6 +1,4 @@
 
-//  small devise menu hide and show start
-
 const offcanvaes = document.querySelectorAll(".offcanva")
 const offcanvaTragger = document.querySelectorAll(".offcanvaTragger")
 const offcanvaClose = document.querySelectorAll(".offcanvaClose")
@@ -32,10 +30,6 @@ offcanvaClose.forEach((item) => {
     })
 })
 
-//  small devise menu hide and show end
-
-
-//  DropDown menu start
 const dropdown = document.querySelectorAll(".dropdown")
 const dropdownItem = document.querySelectorAll(".dropdown-item")
 dropdown.forEach((e, i) => {
@@ -58,9 +52,7 @@ dropdown.forEach((e, i) => {
         })
     })
 })
-//  dropdown menu end
 
-// --------- sticky header on scroll start
 const header = document.getElementById("header")
 const header_container = document.getElementById("header-container")
 const top_header = document.getElementById("top-header")
@@ -78,9 +70,7 @@ window.onscroll = function () {
     }
     prevScrollpos = currentScrollPos;
 }
-// --------- sticky header on scroll end
 
-// --------- search filed toggle start
 const searchBtn = document.querySelector(".search-btn")
 const searchForm = document.querySelector(".search-form")
 const searchClose = document.querySelector(".search-close")
@@ -98,10 +88,7 @@ window.addEventListener("keydown", (e) => {
         searchForm.classList.remove("opacity-100", "visible", 'z-20')
     }
 })
-// --------- search filed toggle end
 
-
-//--------- start according 
 const accordingItem = document.querySelectorAll(".according-item")
 const accordingBtn = document.querySelectorAll(".according-btn")
 accordingBtn.forEach((item, index) => {
@@ -116,9 +103,7 @@ accordingBtn.forEach((item, index) => {
 
     }))
 })
-//--------- according end 
 
-//  istop gallery start
 const target_tab = document.querySelectorAll(".target-tab")
 const target_card = document.querySelectorAll(".target-card")
 
@@ -140,7 +125,6 @@ const diaplayCard = (list_attribute) => {
 const target = (callback) => {
     target_tab.forEach((item, index) => {
         item.addEventListener("click", (e) => {
-            // remove item active class name and add this calssname in new item
             target_tab.forEach((i) => {
                 console.log(i.classList)
                 i.classList.remove("active-tab")
@@ -153,10 +137,6 @@ const target = (callback) => {
 }
 target(diaplayCard)
 
-//  istop gallery end
-
-
-// scroll on counter start
 const counters = document.querySelectorAll('.counter');
 
 const options = {
@@ -198,17 +178,11 @@ function startCounting(element) {
     element.classList.add('visible');
     updateCounter();
 }
-// scroll on counter end
 
-
-// scroll top top on button click start
 const scroll_up = document.getElementById("scroll-up")
 scroll_up.addEventListener("click", () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 })
-// scroll top top on button click end
-
-
 
 const testimonial = new Swiper('.testimonial-swiper', {
     autoplay: {
@@ -227,10 +201,6 @@ const testimonial = new Swiper('.testimonial-swiper', {
             slidesPerView: 1,
         }
     },
-    // pagination: {
-    //     el: ".testimonial-pagination",
-    //     clickable: true
-    // },
 });
 
 const partner_swiper = new Swiper('.partner-swiper', {
@@ -281,8 +251,6 @@ const service_swiper = new Swiper('.service-swiper', {
         }
     },
 });
-
-
 
 new WOW().init();
 

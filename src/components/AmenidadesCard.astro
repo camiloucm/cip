@@ -38,10 +38,6 @@ const { imageUrl } = Astro.props;
                 <div class="border-6 border-primary w-90 h-48 bg-cover bg-center">
                     <div class="amenidadDos w-full h-full object-cover bg-center"></div>
                 </div>
-
-                <!-- <div class="border-6 border-primary w-80 h-48 bg-cover bg-center">
-                    <div class="amenidadTres w-full h-full object-cover bg-center"></div>
-                </div> -->
             </div>
         </div>
     </article> 
@@ -73,17 +69,17 @@ const { imageUrl } = Astro.props;
     }
 
     ul {
-        list-style-type: none; /* Elimina los estilos de lista predeterminados */
-        padding-left: 0; /* Elimina el padding predeterminado del ul */
+        list-style-type: none;
+        padding-left: 0;
     }
 
     li {
-        margin-bottom: 5px; /* Agrega espacio entre los elementos de la lista */
+        margin-bottom: 5px;
     }
 
     li:before {
-        content: "\25CF";  /* Unicode para un círculo relleno */
-        color: var(--color-white);     /* Color del círculo (puedes cambiarlo) */
+        content: "\25CF";
+        color: var(--color-white);
         display: inline-block;
         width: 1em;
         margin-left: -1em;

@@ -7,90 +7,75 @@ import FooterSocial from "./FooterSocial.astro"
 <footer class="pt-24 relative">
     <div class="container w-4/5 m-auto">
         <div class="grid lg:grid-cols-[370px_auto_auto] sm:grid-cols-2 grid-cols-1 justify-between gap-7.5">
-            
-                <div class="wow fadeInUp" data-wow-delay=".3s">
-                    <a href="/" class="flex items-center gap-1">
-                        <i class="w-42 text-primary">
-                            <Logocompleto />
-                        </i>
-                    </a>
+            <div class="wow fadeInUp" data-wow-delay=".3s">
+                <a href="/" class="flex items-center gap-1">
+                    <i class="w-42 text-primary">
+                        <Logocompleto />
+                    </i>
+                </a>
 
-                    <p class="py-8 italic text-secondary">
-                        Nuestro hostal te ofrece la comodidad que necesitas para aprovechar al máximo tu visita. ¡No busques más, tu base ideal está aquí!
-                    </p>
+                <p class="py-8 italic text-secondary">
+                    Nuestro hostal te ofrece la comodidad que necesitas para aprovechar al máximo tu visita. ¡No busques más, tu base ideal está aquí!
+                </p>
 
-                    <ul class="flex items-center gap-5 text-white">
-                        <HeaderMobileSocial page_open="https://www.facebook.com" icon_social="fa-brands fa-facebook-f" />
-                        <HeaderMobileSocial page_open="https://www.instagram.com" icon_social="fa-brands fa-instagram" />
-                        <HeaderMobileSocial page_open="https://wa.me/+50766127168?text=He visitado tu página de hospedaje y deseo más información." icon_social="fa-brands fa-whatsapp" />
-                    </ul>
-                </div>
-        
+                <ul class="flex items-center gap-5 text-white">
+                    <HeaderMobileSocial page_open="https://www.facebook.com" icon_social="fa-brands fa-facebook-f" />
+                    <HeaderMobileSocial page_open="https://www.instagram.com" icon_social="fa-brands fa-instagram" />
+                    <HeaderMobileSocial page_open="https://wa.me/+50766127168?text=He visitado tu página de hospedaje y deseo más información." icon_social="fa-brands fa-whatsapp" />
+                </ul>
+            </div>
+    
+            <div class="wow fadeInUp" data-wow-delay=".5s">
+                <h3 class="text-2xl font-semibold">Páginas</h3>
+                <ul class="flex flex-col pt-5 w-2xs">
+                    <HeaderMobileOptions page_title="Inicio" />
+                    <HeaderMobileOptions page_title="Nosotros" />
+                    <HeaderMobileOptions page_title="Habitaciones" />
+                    <HeaderMobileOptions page_title="Galería" />
+                    <HeaderMobileOptions page_title="Blog" />
+                    <HeaderMobileOptions page_title="Contáctanos" />
+                    <HeaderMobileOptions page_title="FAQ" />
+                </ul>
+            </div>
 
-
-
-
-   
-                <div class="wow fadeInUp" data-wow-delay=".5s">
-                    <h3 class="text-2xl font-semibold">Páginas</h3>
-                    <ul class="flex flex-col pt-5 w-2xs">
-                        <HeaderMobileOptions page_title="Inicio" />
-                        <HeaderMobileOptions page_title="Nosotros" />
-                        <HeaderMobileOptions page_title="Habitaciones" />
-                        <HeaderMobileOptions page_title="Galería" />
-                        <HeaderMobileOptions page_title="Blog" />
-                        <HeaderMobileOptions page_title="Contáctanos" />
-                        <HeaderMobileOptions page_title="FAQ" />
-                    </ul>
-                </div>
-          
-
-
-
-
-       
-                <div class=" wow fadeInUp w-full" data-wow-delay=".5s">
-                    <h3 class="text-2xl font-semibold">Contáctanos</h3>
-                    <ul class="flex flex-col gap-7 pt-5 w-2xs">
-                        <FooterSocial 
-                            icon_contact="fa-solid fa-location-dot" 
-                            text_contact="Calle Ernesto J. Castillero Casa 07, Ancón, Panamá"
-                            link_contact="https://www.google.com/maps/place/plaza+70/@5.0504414,-75.4861049,17z/data=!3m1!4b1!4m6!3m5!1s0x8e47657786d86a8f:0x4a2bd5a37e31f3e6!8m2!3d5.0504414!4d-75.48353!16s%2Fg%2F11csr13mtd?entry=ttu&g_ep=EgoyMDI1MDUyNy4wIKXMDSoASAFQAw%3D%3D"
-                        />
-                        <FooterSocial 
-                            icon_contact="fa-solid fa-envelope" 
-                            text_contact="fwald@idac.com.pa  franzwald13@gmail.com"
-                            link_contact="mailto:fwald@idac.com.pa?subject=INFORMACIÓN DE HOSPEDAJE&body=Estuve visitando tu página y deseo conocer la siguiente información: "
-                        />
-                        <FooterSocial 
-                            icon_contact="fa-solid fa-phone" 
-                            text_contact="(507) 66127168"
-                            link_contact="tel:+50766127168"
-                        />
-                    </ul>
-                </div>
-       
+            <div class=" wow fadeInUp w-full" data-wow-delay=".5s">
+                <h3 class="text-2xl font-semibold">Contáctanos</h3>
+                <ul class="flex flex-col gap-7 pt-5 w-2xs">
+                    <FooterSocial 
+                        icon_contact="fa-solid fa-location-dot" 
+                        text_contact="Calle Ernesto J. Castillero Casa 07, Ancón, Panamá"
+                        link_contact="https://www.google.com/maps/place/plaza+70/@5.0504414,-75.4861049,17z/data=!3m1!4b1!4m6!3m5!1s0x8e47657786d86a8f:0x4a2bd5a37e31f3e6!8m2!3d5.0504414!4d-75.48353!16s%2Fg%2F11csr13mtd?entry=ttu&g_ep=EgoyMDI1MDUyNy4wIKXMDSoASAFQAw%3D%3D"
+                    />
+                    <FooterSocial 
+                        icon_contact="fa-solid fa-envelope" 
+                        text_contact="fwald@idac.com.pa  franzwald13@gmail.com"
+                        link_contact="mailto:fwald@idac.com.pa?subject=INFORMACIÓN DE HOSPEDAJE&body=Estuve visitando tu página y deseo conocer la siguiente información: "
+                    />
+                    <FooterSocial 
+                        icon_contact="fa-solid fa-phone" 
+                        text_contact="(507) 66127168"
+                        link_contact="tel:+50766127168"
+                    />
+                </ul>
+            </div>
         </div>
 
+        <div class="pt-6 overflow-x-hidden">
+            <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-7.5 pb-8 border-t border-t-white border-opacity-20">
+            
 
-     
-            <div class="pt-6 overflow-x-hidden">
-                <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-7.5 pb-8 border-t border-t-white border-opacity-20">
-                
+                <p class="wow fadeInLeft text-secondary" data-wow-delay=".3s">
+                    Diseñado por 
+                    <a class="text-primary italic" href="">www.conceptoclave.com</a> 
+                    para <span class="font-bold">Canal Inn Hostal</span> © 2025 | Todos los derechos reservados
+                </p>
 
-                    <p class="wow fadeInLeft text-secondary" data-wow-delay=".3s">
-                        Diseñado por 
-                        <a class="text-primary italic" href="">www.conceptoclave.com</a> 
-                        para <span class="font-bold">Canal Inn Hostal</span> © 2025 | Todos los derechos reservados
-                    </p>
-
-                    <ul class="flex items-center gap-7.5 wow fadeInRight sm:mt-0 mt-4 text-center" data-wow-delay=".3s">
-                        <li class="hover:text-primary transition-all duration-500"><a href="">Términos y condiciones</a></li>
-                        <li class="hover:text-primary transition-all duration-500"><a href="">Política de privacidad</a></li>
-                        <li class="hover:text-primary transition-all duration-500"><a href="/contáctanos">Contáctanos</a></li>
-                    </ul>
-                </div>
+                <ul class="flex items-center gap-7.5 wow fadeInRight sm:mt-0 mt-4 text-center" data-wow-delay=".3s">
+                    <li class="hover:text-primary transition-all duration-500"><a href="">Términos y condiciones</a></li>
+                    <li class="hover:text-primary transition-all duration-500"><a href="">Política de privacidad</a></li>
+                    <li class="hover:text-primary transition-all duration-500"><a href="/contáctanos">Contáctanos</a></li>
+                </ul>
             </div>
-     
+        </div>
     </div>
 </footer>

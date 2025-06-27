@@ -1,7 +1,6 @@
 const DOMAIN = import.meta.env.WP_DOMAIN;
 const apiUrl = `${DOMAIN}/wp-json/wp/v2`;
 
-//Esto es para agregar contenido a las páginas
 export const getPageinfo = async ( slug:string ) => {
     const response = await fetch (`${ apiUrl }/pages?slug=${ slug }`);
     if ( !response.ok ) throw new Error ( 'La página falló realizando el Fetching de datos' );
@@ -12,7 +11,6 @@ export const getPageinfo = async ( slug:string ) => {
     return { title, content};
 }
 
-//Esto es para las entradas
 export const getLatestposts = async ({ perPage = 10 } : { perPage?: number } = {}) => {
     const response = await fetch (`${ apiUrl }/posts?per_page=${ perPage }&_embed`); 
     if ( !response.ok ) throw new Error ('La página falló realizando el Fetching de datos');
@@ -28,13 +26,6 @@ export const getLatestposts = async ({ perPage = 10 } : { perPage?: number } = {
             slug,
             date 
         } = post;
-
-        //Dicho de otra manera
-        /* const TITLE = post.TITLE.rendered;
-        const EXCERPT = post.EXCERPT.rendered;
-        const CONTENT = post.CONTENT.rendered;
-        const DATE = post.DATE;
-        const SLUG = post.SLUG; */
 
         const featuredImage = post._embedded['wp:featuredmedia'][0].source_url
 
@@ -56,7 +47,6 @@ export const getAllPostsSlugs = async () => {
     return slugs;
 }
 
-//Esto es para agregar contenido a la página de entrada
 export const getPostInfo = async ( slug:string ) => {
     const response = await fetch (`${ apiUrl }/posts?slug=${ slug }`);
     if ( !response.ok ) throw new Error ( 'La página falló realizando el Fetching de datos' );

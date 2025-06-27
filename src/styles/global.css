@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @font-face {
     font-family: 'Roboto';
-    src: url(/public/src/fonts/Roboto-VariableFont_wdth\,wght.woff2) format('woff2');
+    src: url(/public/src/fonts/Roboto-VariableFont.woff2) format('woff2');
     font-display: swap;
     font-weight: 100 900;
 }
@@ -30,17 +30,6 @@
 
     --text-iconpreheader: 28px;
 }
-
-/* --text-title: 28px;
-    --text-parrafo: 24px;
-    --text-secondtitle: 24px;
-    --text-mtitle: 20px;
-    --text-mparrafo: 17px;
-    --text-msecondtitle: calc(var(--text-secondtitle)*0.1);
-
-    --text-iconpreheader: 40px; */
-
-
 
 html {
     font-family: 'Roboto', sans-serif;

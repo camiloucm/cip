@@ -37,7 +37,7 @@ const { page } = Astro.params as Props;
   {page === 'blog' && <Blog />}
   {page === 'contáctanos' && <Contáctanos />}
   {page === 'faq' && <Faq />}
-  {/* Manejo de error: Si la página no existe */}
+  
   { !['nosotros', 'habitaciones', 'blog', 'contáctanos', 'faq'].includes(page) &&
     <section class="flex w-full items-center justify-center mt-16">
         <article class="flex flex-col items-center justify-center w-4/5 text-center">

@@ -8,16 +8,11 @@ interface Props {
     date: string; 
 }
 
-
 const { title, excerpt, featuredImage, slug, date } = Astro.props as Props;
-
-
 
 const postDate = new Date(date);
 
-
 const day = postDate.getDate();
-
 
 const months = ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"];
 const monthAbbreviation = months[postDate.getMonth()];
@@ -50,7 +45,6 @@ const monthAbbreviation = months[postDate.getMonth()];
             </a>
         </div>
 
-        <!-- <div class="sm:text-xl text-2xs text-justify" set:html={ excerpt }></div> -->
         <div class="excerp text-justify" style="font-size: clamp(0.8rem, 2vw, 1.2rem);" set:html={ excerpt }></div>
 
         <div class="flex justify-between w-full h-auto">

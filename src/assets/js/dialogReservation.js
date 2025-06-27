@@ -33,23 +33,18 @@ BACKPAGE.addEventListener('click', function () {
   BACKGROUND.classList.add('invisible');
 });
 
-// Evento para actualizar el checkout cuando cambia el checkin
 CHECKIN.addEventListener('change', function () {
   const checkinDate = new Date(CHECKIN.value);
   const nextDay = new Date(checkinDate);
 
-  //Establecer la fecha de salida un dia después del checkin
   nextDay.setDate(checkinDate.getDate() + 2);
 
-  // Formatear la fecha para el input type="date" (YYYY-MM-DD)
   const year = nextDay.getFullYear();
   const month = String(nextDay.getMonth() + 1).padStart(2, '0');
   const day = String(nextDay.getDate()).padStart(2, '0');
   const nextDayFormatted = `${year}-${month}-${day}`;
 
-  //Establecer el valor mínimo del checkout
   CHECKOUT.min = nextDayFormatted;
-  //Actualizar el valor del checkout
   CHECKOUT.value = nextDayFormatted;
 });
 
@@ -62,14 +57,11 @@ NEXT_PAGE.addEventListener('click', function () {
   let checkinValue = CHECKIN.value;
   let checkoutValue = CHECKOUT.value;
 
-  // Convertir las fechas a objetos Date
   const checkinDate = new Date(checkinValue);
   const checkoutDate = new Date(checkoutValue);
 
-  // Calcular la diferencia en milisegundos
   const timeDiff = checkoutDate.getTime() - checkinDate.getTime();
 
-  // Calcular la diferencia en días
   const DAYS_ROOM = Math.ceil(timeDiff / (1000 * 3600 * 24));
 
   let paxValue = parseFloat(PAX.value);

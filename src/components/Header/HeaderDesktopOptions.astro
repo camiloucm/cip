@@ -1,19 +1,12 @@
 ---
-/* interface Props {
-    page_open: string;
-    page_title: string;
-}
-
-const { page_open, page_title } = Astro.props; */
-
 interface Props {
   page_title: string;
   page_open?: string;
 }
 
 const { page_title } = Astro.props;
-console.log("page_title:", page_title); // Para debug
-const page_open = page_title.toLowerCase(); // Convierte a minúsculas
+console.log("page_title:", page_title);
+const page_open = page_title.toLowerCase();
 const url = page_open === 'inicio' ? '/' : `/${page_open}`;
 ---
 

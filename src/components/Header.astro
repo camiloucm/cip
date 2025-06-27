@@ -5,15 +5,6 @@ import HeaderDesktop from "./HeaderDesktop.astro"
 import HeaderMobileOptions from "./HeaderMobile/HeaderMobileOptions.astro"
 import HeaderMobileContact from "./HeaderMobile/HeaderMobileContact.astro"
 import HeaderMobileSocial from "./HeaderMobile/HeaderMobileSocial.astro"
-
-//De aqui para abajo es ia
-/* interface Props {
-  page_title: string;
-}
-
-const { page_title } = Astro.props;
-
-const page_open = page_title.toLowerCase() */
 ---
 
 <header id="header" class="sticky top-0 transition-[top] duration-300 z-40">
@@ -23,111 +14,110 @@ const page_open = page_title.toLowerCase() */
         </div>
         
 
-            <div class="[.header-pinned_&]:shadow-md transition-all duration-300 sm:w-4/5 w-full">
-                <div class="container sm:py-5 sm:px-10 py-3 px-6 flex justify-center bg-primary text-white">
-                    <div class="flex sm:w-full items-center w-full ">
-     
-                            <div class="">
-                                <a href="/" class="flex items-center">
-                                    <i class="sm:hidden w-42 text-white">
-                                        <Logocompleto />
-                                    </i>
-                                </a>
-                            </div>
- 
-
-                        <div class="flex w-full h-full items-center gap-14">
-                            <nav class="xl:block hidden w-full">
-                                <div class="flex items-center w-full">    
-                                    <HeaderDesktop />
-                                </div>
-                            </nav>
-
-           
-                            <div class="block xl:hidden">
-                                <div class="fixed left-0 top-0 w-full h-full bg-black/80 invisible transition-all offcanva-overlay"></div>
-                                <nav class="bg-white border-l-2 border-l-primary w-full max-w-md min-h-screen h-full overflow-y-auto p-7 shadow-md fixed -right-full top-0 z-50 transition-all duration-500 offcanva">
-                                    <div class="flex justify-between items-center">
-                                        <a href="/" class="flex items-center">
-                                            <i class="sm:hidden w-42 text-white">
-                                                <Logocompleto />
-                                            </i>
-                                        </a>
-
-                                        <div class="bg-primary w-10 h-10 text-white flex items-center justify-center rounded-[4px] left-4 offcanvaClose">
-                                            <i class="fa-solid fa-xmark text-xl"></i>
-                                        </div>
-                                    </div>
-
-                                    <ul class=" mt-6">
-                                        <HeaderMobileOptions page_title="Inicio" />
-                                        <HeaderMobileOptions page_title="Nosotros" />
-                                        <HeaderMobileOptions page_title="Habitaciones" />
-                                        <HeaderMobileOptions page_title="Galería" />
-                                        <HeaderMobileOptions page_title="Blog" />
-                                        <HeaderMobileOptions page_title="Contáctanos" />
-                                        <HeaderMobileOptions page_title="FAQ" />
-                                    </ul>
-
-                             
-                                        <div class="mt-5">
-                                            <div>
-                                                <h4 class="text-xl font-bold">Contáctanos</h4>
-                                                <ul class="mt-5 flex flex-col text-secondary gap-4">
-                                                    <HeaderMobileContact 
-                                                        page_open="tel:+50766127168" 
-                                                        icon_contact="fa-solid fa-phone" 
-                                                        text_contact="(507) 66127168" 
-                                                    />
-                                                    <HeaderMobileContact 
-                                                        page_open="mailto:fwald@idac.com.pa?subject=INFORMACIÓN DE HOSPEDAJE&body=Estuve visitando tu página y deseo conocer la siguiente información: " 
-                                                        icon_contact="fa-solid fa-envelope" 
-                                                        text_contact="fwald@idac.com.pa - franzwald13@gmail.com" 
-                                                    />
-                                                    <HeaderMobileContact 
-                                                        page_open="https://www.google.com/maps/place/plaza+70/@5.0504414,-75.4861049,17z/data=!3m1!4b1!4m6!3m5!1s0x8e47657786d86a8f:0x4a2bd5a37e31f3e6!8m2!3d5.0504414!4d-75.48353!16s%2Fg%2F11csr13mtd?entry=ttu&g_ep=EgoyMDI1MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
-                                                        icon_contact="fa-solid fa-location-dot" 
-                                                        text_contact="Calle Ernesto J. Castillero Casa 07, Ancón, Panamá"
-                                                    />
-                                                </ul>
-                                            </div>
-
-                                            <div class="my-11 hover:scale-150">
-                                                <a href="/Contáctanos" class="bg-primary text-white rounded-md sm:flex items-center gap-2.5 btn after:bg-pink-500 py-3 px-6"> Reservaciones <span><i class="fa-solid fa-arrow-right"></i></span> </a>
-                                            </div>
-
-                                            <ul class="flex items-center gap-6 mt-6">
-                                                <HeaderMobileSocial page_open="https://www.facebook.com" icon_social="fa-brands fa-facebook-f" />
-                                                <HeaderMobileSocial page_open="https://www.instagram.com" icon_social="fa-brands fa-instagram" />
-                                                <HeaderMobileSocial page_open="https://wa.me/+50766127168?text=He visitado tu página de hospedaje y deseo más información." icon_social="fa-brands fa-whatsapp" />
-                                            </ul>
-                                        </div>
-                       
-                                </nav>
-                            </div>
-             
-                            
-                            
-                            
-
-               
-                            <div class="flex items-center gap-6 sm:w-auto w-full justify-end">
-               
-                                <a href="/Contáctanos" class="bg-black-400 text-gree-500 rounded-md sm:flex hidden items-center gap-2.5 btn after:bg-green bg-white text-primary px-4 py-2 hover:bg-secondary hover:text-white transition-all duration-500"> Reservaciones <span><i class="fa-solid fa-arrow-right"></i></span> </a>
-                                <div class="block xl:hidden">
-                                    <div class="flex flex-col items-end cursor-pointer transition-all duration-500 offcanvaTragger">
-                                        <span class="block h-1 w-5 bg-white"></span>
-                                        <span class="block h-1 w-7.5 bg-white mt-2"></span>
-                                        <span class="block h-1 w-5 bg-white mt-2"></span>
-                                    </div>
-                                </div>
-                            </div>
-                       
+        <div class="[.header-pinned_&]:shadow-md transition-all duration-300 sm:w-4/5 w-full">
+            <div class="container sm:py-5 sm:px-10 py-3 px-6 flex justify-center bg-primary text-white">
+                <div class="flex sm:w-full items-center w-full ">
+    
+                        <div class="">
+                            <a href="/" class="flex items-center">
+                                <i class="sm:hidden w-42 text-white">
+                                    <Logocompleto />
+                                </i>
+                            </a>
                         </div>
 
+
+                    <div class="flex w-full h-full items-center gap-14">
+                        <nav class="xl:block hidden w-full">
+                            <div class="flex items-center w-full">    
+                                <HeaderDesktop />
+                            </div>
+                        </nav>
+
+        
+                        <div class="block xl:hidden">
+                            <div class="fixed left-0 top-0 w-full h-full bg-black/80 invisible transition-all offcanva-overlay"></div>
+                            <nav class="bg-white border-l-2 border-l-primary w-full max-w-md min-h-screen h-full overflow-y-auto p-7 shadow-md fixed -right-full top-0 z-50 transition-all duration-500 offcanva">
+                                <div class="flex justify-between items-center">
+                                    <a href="/" class="flex items-center">
+                                        <i class="sm:hidden w-42 text-white">
+                                            <Logocompleto />
+                                        </i>
+                                    </a>
+
+                                    <div class="bg-primary w-10 h-10 text-white flex items-center justify-center rounded-[4px] left-4 offcanvaClose">
+                                        <i class="fa-solid fa-xmark text-xl"></i>
+                                    </div>
+                                </div>
+
+                                <ul class=" mt-6">
+                                    <HeaderMobileOptions page_title="Inicio" />
+                                    <HeaderMobileOptions page_title="Nosotros" />
+                                    <HeaderMobileOptions page_title="Habitaciones" />
+                                    <HeaderMobileOptions page_title="Galería" />
+                                    <HeaderMobileOptions page_title="Blog" />
+                                    <HeaderMobileOptions page_title="Contáctanos" />
+                                    <HeaderMobileOptions page_title="FAQ" />
+                                </ul>
+
+                            
+                                    <div class="mt-5">
+                                        <div>
+                                            <h4 class="text-xl font-bold">Contáctanos</h4>
+                                            <ul class="mt-5 flex flex-col text-secondary gap-4">
+                                                <HeaderMobileContact 
+                                                    page_open="tel:+50766127168" 
+                                                    icon_contact="fa-solid fa-phone" 
+                                                    text_contact="(507) 66127168" 
+                                                />
+                                                <HeaderMobileContact 
+                                                    page_open="mailto:fwald@idac.com.pa?subject=INFORMACIÓN DE HOSPEDAJE&body=Estuve visitando tu página y deseo conocer la siguiente información: " 
+                                                    icon_contact="fa-solid fa-envelope" 
+                                                    text_contact="fwald@idac.com.pa - franzwald13@gmail.com" 
+                                                />
+                                                <HeaderMobileContact 
+                                                    page_open="https://www.google.com/maps/place/plaza+70/@5.0504414,-75.4861049,17z/data=!3m1!4b1!4m6!3m5!1s0x8e47657786d86a8f:0x4a2bd5a37e31f3e6!8m2!3d5.0504414!4d-75.48353!16s%2Fg%2F11csr13mtd?entry=ttu&g_ep=EgoyMDI1MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
+                                                    icon_contact="fa-solid fa-location-dot" 
+                                                    text_contact="Calle Ernesto J. Castillero Casa 07, Ancón, Panamá"
+                                                />
+                                            </ul>
+                                        </div>
+
+                                        <div class="my-11 hover:scale-150">
+                                            <a href="/Contáctanos" class="bg-primary text-white rounded-md sm:flex items-center gap-2.5 btn after:bg-pink-500 py-3 px-6"> Reservaciones <span><i class="fa-solid fa-arrow-right"></i></span> </a>
+                                        </div>
+
+                                        <ul class="flex items-center gap-6 mt-6">
+                                            <HeaderMobileSocial page_open="https://www.facebook.com" icon_social="fa-brands fa-facebook-f" />
+                                            <HeaderMobileSocial page_open="https://www.instagram.com" icon_social="fa-brands fa-instagram" />
+                                            <HeaderMobileSocial page_open="https://wa.me/+50766127168?text=He visitado tu página de hospedaje y deseo más información." icon_social="fa-brands fa-whatsapp" />
+                                        </ul>
+                                    </div>
+                    
+                            </nav>
+                        </div>
+            
+                        
+                        
+                        
+
+            
+                        <div class="flex items-center gap-6 sm:w-auto w-full justify-end">
+            
+                            <a href="/Contáctanos" class="bg-black-400 text-gree-500 rounded-md sm:flex hidden items-center gap-2.5 btn after:bg-green bg-white text-primary px-4 py-2 hover:bg-secondary hover:text-white transition-all duration-500"> Reservaciones <span><i class="fa-solid fa-arrow-right"></i></span> </a>
+                            <div class="block xl:hidden">
+                                <div class="flex flex-col items-end cursor-pointer transition-all duration-500 offcanvaTragger">
+                                    <span class="block h-1 w-5 bg-white"></span>
+                                    <span class="block h-1 w-7.5 bg-white mt-2"></span>
+                                    <span class="block h-1 w-5 bg-white mt-2"></span>
+                                </div>
+                            </div>
+                        </div>
+                    
                     </div>
+
                 </div>
             </div>
-     
+        </div>
     </div>
 </header>
